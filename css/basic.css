@@ -1,0 +1,49 @@
+header {
+  font-size: 300%;
+  font-weight: bold;
+}
+
+header * {
+  vertical-align: middle;
+}
+
+header img {
+  filter: drop-shadow(-1px -1px 3px white);
+  -webkit-filter: drop-shadow(-1px -1px 3px white);
+  margin-right: 40px;
+}
+
+nav,
+footer {
+  padding: 10px;
+}
+
+nav ul {
+  padding:0;
+  margin:0.2em;
+  display: inline-block;
+  list-style: none;
+}
+
+nav ul li {
+  display: inline-block;  
+  padding:0.2em;
+}
+
+footer * {
+  vertical-align: middle;
+}
+
+#more-about-me {
+  width:100%;
+}
+#more-about-me th {
+  padding:10px 15px;
+  width:200px;
+  background-color:rgba(240,255,255,0.95);
+  text-align:left;
+}
+#more-about-me td {
+  padding:10px 15px;
+  background-color:rgba(255,255,255,0.95);
+}
