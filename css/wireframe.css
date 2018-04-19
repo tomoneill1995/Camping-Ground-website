@@ -10,6 +10,10 @@ body
 }
 html {
   min-height:100vh;
+  background-image: url(../media/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
 }
 body {
   min-height:calc(100vh - 40px);
@@ -45,7 +49,7 @@ nav
 }
 main
 {
-  background-color: hsl(120,100%,97%);
+  background-color: hsl(120,100%,97%,60%);
   border: 5px solid hsl(120,100%,40%);
 }
 footer
@@ -97,7 +101,6 @@ marquee,
 frame,
 table {
   padding:10px;
-  background: repeating-linear-gradient(315deg, #999 0px, #999 20px, #9FF 20px, #9FF 40px) !important;
 }
 
 center::after,
@@ -114,4 +117,40 @@ marquee::after,
   color:red;
   font-weight:bold;
   text-shadow: -1px -1px 1px rgba(255,255,255,0.8), 2px  2px 2px rgba(0,0,0,0.8);
+}
+
+h1 {
+  font-family: 'Port Lligat Sans', sans-serif;
+}
+
+p {
+  font-family: open-sans;
+  font-size: 20px;
+}
+
+a {
+  font-family: 'Cabin', sans-serif;
+  text-decoration: none;
+  color: #000;
+}
+.active{
+  color: #FFF;
+  background-color: #000;
+  
+}
+a:hover{
+  
+  background-color: #72F65D
+}
+
+td{
+  border: 1px solid black;
+  background-color: white;
+}
+.td-name{
+  background-color: #8FA0A7;
+}
+
+th{
+  background-color: #8FA0A7;
 }
