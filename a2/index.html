@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset="utf-8">
+  <meta name="Craig Robinson" content="Assignment 2">
+  <title>Assignment 1</title>
+
+  <!-- We will cover style later. Skip down to the body tag -->
+  <link type="text/css" rel="stylesheet" href="/~e54061/css/wireframe.css"/>
+</head>
+
+<body>
+
+  <header>
+    <div>
+      <h1>Header</h1>
+
+      Put company logo and name here
+    
+    </div>
+  </header>
+
+  <nav>
+    <div>Put website navigation links here</div>
+  </nav>
+
+  <main>
+    <article id='Website Under Construction'>
+  <!-- Creative Commons image sourced from https://pixabay.com/en/maintenance-under-construction-2422173/ and used for educational purposes only -->
+      <img src='../media/website-under-construction.png' alt='Website Under Construction' />
+
+      <form action="submitpage.php" method="POST", onsubmit="return doNothing()">
+        <p>Name: <input type="text" name="name" value="" placeholder="First and Last Name"> </p>
+        <p>Email: <input type="email" name="email" value="" placeholder="Email Address"> </p>
+        <p>Message: <textarea name="textarea" value="" placeholder="Enter your comment hereeeee"> </p>
+        <p> <input type="submit" value="Submit"> </p>
+      </form>
+
+    </article>
+  </main>
+
+  <footer>
+    <div>&copy;<script>
+      document.write(new Date().getFullYear());
+    </script> Craig Robinson - s3488614 - Starch Industries</div>
+    <div>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web Programming course at RMIT University in Melbourne, Australia.</div>
+    <div>Maintain links to your working <a href='../style-guide.php'>style guide</a>, your <a href='../products.txt'>products spreadsheet</a> and <a href='../orders.txt'>orders spreadsheet</a> here.</div>
+  </footer>
+
+
+</body>
+
+</html>
