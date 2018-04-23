@@ -41,12 +41,17 @@ header
 {
   background-color: hsl(0,100%,97%);
   border: 5px solid hsl(0,100%,60%);
+
+
 }
 nav
 {
-  display: inline-block;
-  background-color: hsl(240,100%,97%);
-  border: 5px solid hsl(240,100%,60%);
+  
+  /* background-color: hsl(240,100%,97%); */
+  /* border: 5px solid hsl(240,100%,60%); */
+
+  float: right;
+  margin-right: 20%;
 }
 main
 {
@@ -154,4 +159,7 @@ td{
 
 th{
   background-color: #8FA0A7;
+}
+.logo{
+  width: 200px;
 }
