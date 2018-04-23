@@ -44,6 +44,7 @@ header
 }
 nav
 {
+  display: inline-block;
   background-color: hsl(240,100%,97%);
   border: 5px solid hsl(240,100%,60%);
 }
