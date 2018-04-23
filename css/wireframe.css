@@ -48,17 +48,17 @@ header
 {
   /* background-color: hsl(0,100%,97%); */
   /* border: 5px solid hsl(0,100%,60%); */
-
-
 }
 nav
 {
-  
   /* background-color: hsl(240,100%,97%); */
   /* border: 5px solid hsl(240,100%,60%); */
-
   float: right;
-  margin-right: 20%;
+}
+
+nav a {
+  font-size: 14pt;
+  padding: 0 10px;
 }
 main
 {
@@ -158,8 +158,10 @@ p.ratesContent {
 
 a {
   font-family: 'Cabin', sans-serif;
+
   text-decoration: none;
   color: #000;
+ 
 }
 .active{
   color: #FFF;
@@ -187,5 +189,5 @@ th{
   width:5%;
 }
 .logo{
-  width: 200px;
+  width: 300px;
 }
