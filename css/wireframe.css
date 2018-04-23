@@ -30,7 +30,6 @@ body {
 header,
 nav,
 main,
-footer,
 aside,
 section,
 article,
@@ -74,8 +73,8 @@ footer
 
 article
 {
-  background-color: hsl(270,100%,97%);
-  border: 5px solid hsl(270,100%,70%);
+  background-color: hsl(199, 28%, 17%,40%);
+  /* border: 5px solid hsl(270,100%,70%); */
 }
 aside
 {
