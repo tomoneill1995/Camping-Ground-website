@@ -12,17 +12,14 @@
 <body>
 
   <header>
-      <img src="../media/Logo.png" alt="Logo" class="logo">
-      <nav>
-        <a href="/index.html" > Home </a> 
-        <a href="/accommodation.html" class="active"> Accommodation </a> 
-        <a href="/rates.html" > Rates </a> 
-        <a href="/contact.html" > Contact </a> 
-   
-      </nav>
+    <img src="../media/Logo.png" alt="Logo" class="logo">
+    <nav>
+      <a href="/index.html" > Home </a> 
+      <a href="/accommodation.html" class="active"> Accommodation </a> 
+      <a href="/rates.html" > Rates </a> 
+      <a href="/contact.html" > Contact </a> 
+    </nav>
   </header>
-
- 
 
   <main>
 
@@ -38,23 +35,89 @@
       <h1 class="white"> Unpowered</h1>
     </article>
 
-    <div id="SmallUS" class="button"><input type="button"> </div>
-    <div id="MediumUS" class="button"><input type="button"> </div>
+    <div id="SmallUS" class="button">
+      <p> Small Unpowered Site <br> <br>
+
+          Small Unpowered site <br>
+          6m x 6m <br>
+          
+          $30.25 Per Day <br>
+          $10.00 Per Additional Adult <br>
+          $5.00 Per addtional Child</p>
+      <input type="button"> 
+    </div>
+
+    <div id="MediumUS" class="button">
+      <p>
+          Medium Unpowered Site <br> <br>
+
+          Medium Unpowered site <br>
+          9m x 9m <br>
+          
+          $40.50 Per Day <br>
+          $10.00 Per Additional Adult <br>
+          $5.00 Per addtional Child </p>  
+      
+      <input type="button"> 
+    
+    </div>
 
     <article> 
       <h1 class="white"> Powered </h1>
     </article>
 
-    <div id="SmallPS" class="button"> <input type="button"> </div>
-    <div id="MediumPS" class="button"> <input type="button"> </div>
-   
+    <div id="SmallPS" class="button"> 
+      <p>Small Powered Site <br> <br>
+          Small Powered site <br>
+          6m x 6m <br>
+          $50.25 Per Day <br>
+          $10.00 Per Additional Adult <br>
+          $5.00 Per addtional Child </p>
+      <input type="button"> 
+    </div>
+
+    <div id="MediumPS" class="button"> 
+      <p> Medium Powered Site <br> <br>
+          Medium Powered site <br>
+          12m x 12m <br>
+          2x 240v Sources <br>
+          
+          $60.50 Per Day <br>
+          $10.00 Per Additional Adult <br>
+          $5.00 Per addtional Child</p>
+      
+      <input type="button"> 
+    </div>
 
     <article> 
       <h1 class="white"> Caravan and Booking </h1>
     </article>
   
-    <div id="Caravan" class="button"> <input type="button"> </div>
-    <div id="Booking" class="button"> <input type="button"> </div>
+    <div id="Caravan" class="button">
+      
+      <p> Caravan Site <br> <br>
+          Caravan Site <br>
+          10m x 10m <br>
+          $100.00 Per Day <br>
+          Free Per Additional Adult <br>
+          Free Per addtional Child </p>
+      <input type="button"> 
+    </div>
+
+    <div id="Booking" class="button"> 
+      <form onsubmit="">
+        <label>Arrival Date: </label> <input type="date"> <br>
+        <label>Duration of Stay: </label> <input type="number"> <br>
+        <label>Number of Adults: </label> <input type="number"> <br>
+        <label>Number of Children: </label> <input type="number"> <br>
+        <p>Total:<br></p>
+        <p>GST: <br></p>
+        <input type="submit" value="Submit Booking">
+      </form>
+
+
+      <input type="button"> 
+    </div>
 
   
   </main>

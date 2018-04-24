@@ -156,7 +156,7 @@ h1 {
   font-family: 'Port Lligat Sans', sans-serif;
 }
 
-p {
+p,label {
   font-family: open-sans;
   font-size: 20px;
 }
