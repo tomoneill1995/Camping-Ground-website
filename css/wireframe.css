@@ -86,10 +86,18 @@ article
 }
 .button {
   display: inline-block;
+  background-color: hsl(199, 28%, 17%,40%);
+  border: 5px solid #000;
+  border-radius: 10%;
+  margin: 1%;
+  width: 35%;
 }
 
 .white{
   color: #fff;
+}
+.accHeading {
+  padding: 0 !important; 
 }
 
 
@@ -159,6 +167,9 @@ h1 {
 p,label {
   font-family: open-sans;
   font-size: 20px;
+}
+label {
+  color:white;
 }
 
 p.ratesContent {
