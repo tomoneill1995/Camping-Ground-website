@@ -87,6 +87,9 @@ article
 .noPadding {
   padding: 0;
 }
+.alignRight {
+  text-align: right;
+}
 
 .button {
   display: inline-block;
@@ -174,6 +177,7 @@ h1 {
 p,label {
   font-family: open-sans;
   font-size: 20px;
+  margin: 0;
 }
 label {
   color:white;
