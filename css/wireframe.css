@@ -84,6 +84,16 @@ article
   border-radius: 10%;
   padding: 5%;
 }
+.button {
+  display: inline-block;
+}
+
+.white{
+  color: #fff;
+}
+
+
+
 aside
 {
   background-color: hsl(180,100%,97%);
