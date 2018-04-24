@@ -91,6 +91,7 @@ article
   border-radius: 10%;
   margin: 1%;
   width: 35%;
+  margin-left: 10%;
 }
 
 .white{
@@ -98,6 +99,8 @@ article
 }
 .accHeading {
   padding: 0 !important; 
+  text-align: center;
+  padding: 0;
 }
 
 
