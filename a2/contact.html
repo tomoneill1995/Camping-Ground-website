@@ -23,7 +23,7 @@
       </nav>
 
       <h1 id="h1contact">Contact</h1>
-      <br><br><br>
+      <br>
 
       <p id="contacttext">
           Please Contact us with any and all queries or concerns.<br>
@@ -34,16 +34,35 @@
       <br><br><br>
       <div id="contactformdiv">
         <form id="contactform" action="https://titan.csit.rmit.edu.au/~e54061/wp/processing.php?ref=contact">
-            Name:
-            <input id="inputname" type="text" name="name" placeholder="Full name"><br><br>
-            Email:
-            <input id="inputemail" type="email" name="email" placeholder="email"><br><br>
-            Phone Number:
-            <input id="inputphone" type="tel" name="phone" placeholder="phone number"><br><br>
-            Message:
-            <input id="inputmessage" type="text" name="message" placeholder="Your message here"> <br><br><br>
-            Do you want to sign up to the mailing list? <input type="checkbox" name="mailing"><br>
-            <input type="submit" value="Submit" id="submitbutton">
+            
+           <label>
+             Name:
+             <input id="inputname" type="text" name="name" placeholder="Full name">
+           </label>
+            <br>
+            <br>
+            
+            <label>Email:
+            <input id="inputemail" type="email" name="email" placeholder="email">
+            </label>
+            <br>
+            <br>
+
+            <label> Number:
+            <input id="inputphone" type="tel" name="phone" placeholder="phone number">
+            </label>
+            <br>
+            <br>
+            
+          <label>Message:
+            <textarea id="messagebox" name="message" rows="5" columns="50" placeholder="Enter message here!"></textarea> 
+          </label>
+            <br>
+            <br>   
+            <br><br><br>
+            <label>Do you want to sign up to the mailing list? <input type="checkbox" name="mailing"><br>
+            </label>
+              <input type="submit" value="Submit" id="submitbutton">
             
         </form>
 
