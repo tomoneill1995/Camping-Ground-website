@@ -217,14 +217,21 @@ max-width: 60%;
 
 #contactformdiv{
   background-color:  rgba(32,49,57,0.7);
-  max-width: 65%;
+  max-width: 55%;
   border-radius: 15px;
-  height: 150px;
+  height: 200px;
   border:1px solid black;
 }
 
+
 #contactform{
   padding-left: 10%;
+}
+
+#contactform input{
+  display: inline-block;
+  float: right;
+  margin-right: 80px;
 }
 
 #h1contact{
