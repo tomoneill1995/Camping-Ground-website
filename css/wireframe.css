@@ -219,11 +219,13 @@ max-width: 60%;
   background-color:  rgba(32,49,57,0.7);
   max-width: 55%;
   border-radius: 15px;
-  height: 200px;
+  height: 220px;
   border:1px solid black;
 }
 
-
+#submitbutton{
+  margin-top: 10px;
+}
 #contactform{
   padding-left: 10%;
 }
