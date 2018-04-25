@@ -234,6 +234,10 @@ max-width: 60%;
   margin-right: 80px;
 }
 
+#inputmessage{
+  height: 40px;
+}
+
 #h1contact{
   padding-left: 10%;
 }
