@@ -36,7 +36,8 @@
       <h1 class="white"> Unpowered</h1>
     </article>
 
-    <div id="SmallUS" class="button">
+    <button class="button" id="SmallUS">
+    <!-- <div id="SmallUS" class="button"> -->
       <img src="../media/Logo.png" alt="Logo" class="placeholder">
       <p class="white"> 
               
@@ -47,12 +48,12 @@
               
         $30.25 Per Day <br>
         $10.00 Per Additional Adult <br>
-        $5.00 Per addtional Child</p>
-          
-      <input type="button">    
-    </div>
+        $5.00 Per addtional Child</p>  
+    <!-- </div> -->
+    </button>
 
-    <div id="MediumUS" class="button">
+    <button id="MediumUS" class="button">
+    <!-- <div id="MediumUS" class="button"> -->
       <img src="../media/Logo.png" alt="Logo" class="placeholder">
       <p class="white">
           Medium Unpowered Site <br> <br>
@@ -63,16 +64,15 @@
           $40.50 Per Day <br>
           $10.00 Per Additional Adult <br>
           $5.00 Per addtional Child </p>  
-      
-      <input type="button"> 
-    
-    </div>
+    <!-- </div> -->
+    </button>
 
     <article class="accHeading"> 
       <h1 class="white"> Powered </h1>
     </article>
 
-    <div id="SmallPS" class="button"> 
+    <button id="SmallPS" class="button">
+    <!-- <div id="SmallPS" class="button">  -->
       <img src="../media/Logo.png" alt="Logo" class="placeholder">
       <p class="white" 
          >Small Powered Site <br> <br>
@@ -82,10 +82,11 @@
           $50.25 Per Day <br>
           $10.00 Per Additional Adult <br>
           $5.00 Per Addtional Child </p>
-      <input type="button"> 
-    </div>
+    <!-- </div> -->
+  </button>
 
-    <div id="MediumPS" class="button"> 
+    <button id="MediumPS" class="button">
+    <!-- <div id="MediumPS" class="button">  -->
       <img src="../media/Logo.png" alt="Logo" class="placeholder">
       <p class="white"> 
           Medium Powered Site <br> <br>
@@ -96,15 +97,15 @@
           $60.50 Per Day <br>
           $10.00 Per Additional Adult <br>
           $5.00 Per Addtional Child</p>
-      
-      <input type="button"> 
-    </div>
+    <!-- </div> -->
+  </button>
 
     <article class="accHeading"> 
       <h1 class="white"> Caravan and Booking </h1>
     </article>
   
-    <div id="Caravan" class="button">
+    <button id="Caravan" class="button">
+    <!-- <div id="Caravan" class="button"> -->
       <img src="../media/Logo.png" alt="Logo" class="placeholder">
       <p class="white"> 
           Caravan Site <br> <br>
@@ -113,12 +114,12 @@
           $100.00 Per Day <br>
           Free Per Additional Adult <br>
           Free Per Addtional Child </p>
-      <input type="button"> 
-    </div>
+    <!-- </div> -->
+  </button>
 
     <div id="Booking" class="button alignRight"> 
       <form onsubmit="" method="POST" action="">
-        <input type="hidden" name="aid">
+        <input type="hidden" name="aid" value="Caravan">
         <label>Arrival Date: </label> <input type="date" name="date" class="Width150" required> <br>
         <label>Duration of Stay: </label> <input type="number" name="days" class="Width150" placeholder="# of Days" required> <br>
         <label>Number of Adults: </label> <input type="number" name="adults" class="Width150" placeholder="# of Adults e.g. 2"required> <br>
@@ -127,11 +128,7 @@
         <p class="white">GST:</p>
         <input type="submit" value="Submit Booking">
       </form>
-
-
-      <input type="button"> 
     </div>
-
   
   </main>
 
@@ -143,8 +140,7 @@
       <br>
       Maintain links to your working <a href='../style-guide.php'>style guide</a>, your <a href='../products.txt'>products spreadsheet</a> and <a href='../orders.txt'>orders spreadsheet</a> here.
   </footer>
-
-
+  
 </body>
 
 </html>
