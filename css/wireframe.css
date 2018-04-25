@@ -88,7 +88,7 @@ article
   padding: 0;
 }
 .alignRight {
-  text-align: right;
+  text-align: right !important;
 }
 
 .button {
@@ -99,6 +99,7 @@ article
   margin: 1%;
   width: 35%;
   margin-left: 10%;
+  text-align: left;
 }
 
 .white{
