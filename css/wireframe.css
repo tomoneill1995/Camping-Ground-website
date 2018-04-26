@@ -84,6 +84,33 @@ article
   border-radius: 10%;
   padding: 5%;
 }
+.noPadding {
+  padding: 0;
+}
+.alignRight {
+  text-align: right !important;
+}
+.button {
+  display: inline-block;
+  background-color: hsl(199, 28%, 17%,40%);
+  border: 5px solid #000;
+  border-radius: 10%;
+  margin: 1%;
+  width: 35%;
+  margin-left: 10%;
+  text-align: left;
+}
+
+.white{
+  color: #fff;
+}
+.accHeading {
+  padding: 0 !important; 
+  text-align: center;
+  padding: 0;
+}
+
+
 aside
 {
   background-color: hsl(180,100%,97%);
@@ -98,6 +125,10 @@ details
 {
   background-color: hsl(60,60%,97%);
   border: 5px solid hsl(60,60%,60%);    
+}
+div
+{
+  border: 2px dashed hsl(210,100%,40%);  
 }
 
 
@@ -142,9 +173,13 @@ h1 {
   font-family: 'Port Lligat Sans', sans-serif;
 }
 
-p {
+p,label {
   font-family: open-sans;
   font-size: 20px;
+  margin: 0;
+}
+label {
+  color:white;
 }
 
 p.ratesContent {
@@ -154,10 +189,8 @@ p.ratesContent {
 
 a {
   font-family: 'Cabin', sans-serif;
-
   text-decoration: none;
   color: #000;
- 
 }
 
 #indexdescription{
@@ -299,4 +332,14 @@ th{
 }
 .logo{
   width: 300px;
+}
+
+.placeholder {
+  width: 100px;
+  height: 200px;
+  float:left;
+}
+
+.Width150 {
+  width: 150px;
 }
