@@ -38,7 +38,7 @@ div
 {
   margin: 5px;
   padding: 5px;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   margin: 0 auto;
   max-width: 80%;
 }
@@ -343,4 +343,17 @@ th{
 
 .Width150 {
   width: 150px;
+}
+
+.inlineFlex {
+   
+
+  
+   /*  */
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  .inlineFlex {
+    display: inline-flex;
+  }
 }
