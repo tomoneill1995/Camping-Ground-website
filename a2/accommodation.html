@@ -24,9 +24,9 @@
   <main>
 
     <article class="noPadding">
-      <h1 class="white"> Accommodation</h1>
+      <h1 class="white headerPadding"> Accommodation</h1>
 
-      <h1 class="white"> We have several different options for accomodation. 
+      <h1 class="white headerPadding"> We have several different options for accomodation. 
           Here's what's on offer.</h1>
     </article>
 
@@ -118,11 +118,11 @@
     <div id="Booking" class="button alignRight inlineFlex"> 
       <form onsubmit="" method="POST" action="https://titan.csit.rmit.edu.au/~e54061/wp/processing.php?ref=accommodation">
         <input type="hidden" name="aid" value="C">
-        <label>Arrival Date: </label> <input type="date" name="date" class="Width150" required> <br>
+        <label>Arrival Date: </label> <input type="date" name="date" class="dateInput" required> <br>
 
         <label>Duration of Stay: </label>
           <select  name="days" class="Width150" required> 
-            <option selected disabled># Of Days </option>
+            <option value=""># Of Days </option>
             <option value="1" >1</option>
             <option value="2" >2</option>
             <option value="3" >3</option>
@@ -141,7 +141,7 @@
 
           <label>Number of Adults:  </label>
           <select name="adults" class="Width150" required> 
-            <option selected disabled># Of Adults </option>
+            <option value=""># Of Adults </option>
             <option value="1" >1</option>
             <option value="2" >2</option>
             <option value="3" >3</option>
@@ -157,7 +157,7 @@
 
           <label>Number of Children:  </label>
           <select name="children" class="Width150" required> 
-            <option selected disabled># Of Children </option>
+            <option value=""># Of Children </option>
             <option value="0" >0</option>
             <option value="1" >1</option>
             <option value="2" >2</option>
@@ -171,9 +171,10 @@
             <option value="10" >10</option>
           </select>    
 
-        <p id="totalCost" class="white Width150">Total:</p> <!-- ID Added for A3, dynamic calculation -->
-        <p id="totalGST" class="white Width150">GST:</p>  <!-- ID Added for A3, dynamic calculation -->
-        <input type="submit" value="Submit Booking">
+        <p id="totalCost" class="white">Total:</p> <!-- ID Added for A3, dynamic calculation -->
+        <br>
+        <p id="totalGST" class="white">GST:</p>  <!-- ID Added for A3, dynamic calculation -->
+        <input type="submit" class="submitButton" value="Submit Booking">
       </form>
     </div>
   

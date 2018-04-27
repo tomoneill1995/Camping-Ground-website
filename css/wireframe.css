@@ -71,6 +71,8 @@ footer
   vertical-align: bottom;
   color: #fff;
   font-size: 10px;
+  padding: 10px;
+  border-radius: 5%;
 }
 
 footer a {
@@ -98,7 +100,8 @@ article
   margin: 1%;
   width: 35%;
   min-width: 170px;
-  margin-left: 10%;
+  min-height: 270px;
+  margin-left: 9%;
   text-align: left;
 }
 
@@ -152,6 +155,7 @@ table {
   padding:2%;
   border-collapse: collapse;
   margin: 0 auto;
+  width: 70%;
 }
 
 center::after,
@@ -351,6 +355,20 @@ th{
 
 .Width150 {
   width: 150px;
+  padding: 5px;
+  margin: 5px;
+}
+
+.dateInput {
+  width: 140px;
+  padding: 5px;
+  margin: 5px;
+}
+
+.submitButton {
+  width: 150px;
+  padding:5px;
+  border-radius: 5%;
 }
 
 .inlineFlex {
@@ -364,4 +382,8 @@ th{
   .inlineFlex {
     display: inline-flex;
   }
+}
+
+.headerPadding {
+  padding: 20px;
 }
