@@ -222,8 +222,8 @@ max-width: 40%;
 
 #ferrytext{
 position: absolute;
-font-size: 14px;
-margin-left: 12%;
+font-size: 16px;
+margin-left: 8%;
 }
 
 .googlemap{
@@ -231,13 +231,13 @@ margin-left: 12%;
   border-radius: 8px;
   max-width: 30%;
   height: auto;
-  margin-left: 20%;
+  margin-left: 15%;
 }
 
 #maptext{
   position: absolute;
   margin-left: 40%;
-  font-size: 14px;
+  font-size: 16px;
   max-width: 25%;
   }
 
