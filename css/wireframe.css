@@ -210,9 +210,9 @@ max-width: 40%;
 .ferrymap{
 
   border-radius: 8px;
-  max-width: 24%;
+  max-width: 34%;
   height: auto;
-  margin-left: 20%;
+  margin-left: 10%;
 }
 
 #gettingthere{
@@ -229,7 +229,7 @@ margin-left: 12%;
 .googlemap{
 
   border-radius: 8px;
-  max-width: 20%;
+  max-width: 30%;
   height: auto;
   margin-left: 20%;
 }
