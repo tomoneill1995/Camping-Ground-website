@@ -295,7 +295,8 @@ max-width: 60%;
 #indexhead{
   background-color: rgba(100,167,200,0.5);
   border-radius: 15px;
-  height: 500px;
+  height: 400px;
+  max-width: 70%; 
   
 }
 #indexfooter{
