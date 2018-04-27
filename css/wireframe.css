@@ -259,20 +259,28 @@ max-width: 60%;
 
 #submitbutton{
   margin-top: 10px;
+  margin-left: 38%;
 }
 #contactform{
   padding-left: 10%;
 }
 
-#contactform input{
+#contactform input:not(#submitbutton){
   display: inline-block;
   float: right;
   margin-right: 80px;
+  padding: 5px;
+}
+
+#mailcheck{
+  font-size: 14px;
+  margin-right: 70%;
 }
 
 #messagebox{
  float: right;
- margin-right: 90px;
+ margin-right: 80px;
+ padding-left: 20px;
 }
 
 #h1contact{
