@@ -1,7 +1,14 @@
 <!DOCTYPE html>
 <html lang='en'>
 
-  <?php require_once("tools.php"); ?>
+  <?php 
+    
+    require_once("tools.php"); 
+    session_start(); 
+    $_POST = $_Session["Booking"];
+
+  
+  ?>
 
 <head>
   <meta charset="utf-8">
