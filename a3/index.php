@@ -7,45 +7,34 @@
     session_start(); 
     $_POST = $_SESSION["Booking"];
     
+
+
+  echo $head;
+
+
   ?>
-
-
-<head>
-  <meta charset="utf-8">
-  <meta name="Tom O'Neill" content="Assignment 2">
-  <title>Open Bay Caravan Park</title>
-  <link type="text/css" rel="stylesheet" href="/css/wireframe.css"/>
-  <link href="https://fonts.googleapis.com/css?family=Cabin|Port+Lligat+Sans" rel="stylesheet">
-  <!-- We will cover style later. Skip down to the body tag -->
-  
-</head>
 
 <body>
 
     <?php
-    // This PHP code inserts CSS to style the "current page" link in the nav area
-    $here = $_SERVER['SCRIPT_NAME']; 
-    $bits = explode('/',$here); 
-    $filename = $bits[count($bits)-1]; 
-    echo "nav a[href$='$filename'] {
-    box-shadow: 1px 1px 1px 2px navy;
-  }";
-  ?>
+      // This PHP code inserts CSS to style the "current page" link in the nav area
+      $here = $_SERVER['SCRIPT_NAME']; 
+      $bits = explode('/',$here); 
+      $filename = $bits[count($bits)-1]; 
+      echo "nav a[href$='$filename'] {
+           box-shadow: 1px 1px 1px 2px navy;
+      }";
+
+
+       echo $header;
 
 
 
-  <header>
-    
-    <img src="../media/Logo.png" alt="Logo" class="logo">
-      <!-- Original Image below sourced for educational purposes: -->
-      <!-- https://pngtree.com/so/cartoon-tent -->
-      <nav>
-        <a class="active"  href="/~s3488614/wp/a2/index.html" > Home </a> 
-        <a href="/~s3488614/wp/a2/accommodation.html" > Accommodation </a> 
-        <a href="/~s3488614/wp/a2/rates.html" > Rates </a> 
-        <a href="/~s3488614/wp/a2/contact.html" > Contact </a> 
-      </nav>
-    </header>
+     ?>
+
+
+    <main>
+
     <div  id="indexhead">
       <h1>Open Bay Caravan Park</h1>
 
@@ -88,15 +77,16 @@
       <br><br><br><br><br><br><br><br><br>
 
   </div>
-  <footer>
-    &copy;<script>
-      document.write(new Date().getFullYear());
-    </script> Craig Robinson - s3488614 Tom O'Neill - s3542941 - Starch Industries<br>
-    Disclaimer: This website is not a real website and is being developed as part of a School of Science Web Programming course at RMIT University in Melbourne, Australia.
-    <br>
-    Maintain links to your working <a href='/~s3488614/wp/a2/style-guide.pdf'>style guide</a>, your <a href='../mailing.txt'>products spreadsheet</a> and <a href='../orders.txt'>orders spreadsheet</a> here.
-</footer>
 
+
+    </main>
+
+    
+
+
+   <?php 
+     echo $footer;
+   ?>
 
 </body>
 

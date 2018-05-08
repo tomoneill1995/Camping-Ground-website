@@ -6,4 +6,29 @@
 //Add the finalisation bookin page here
 
 
+  
+
 ?>
+
+
+<body>
+
+
+<?php echo $header; ?>
+
+ 
+<main>
+
+
+</main>
+
+
+  
+<?php 
+  echo $footer;
+?>
+
+
+</body>
+
+</html>
