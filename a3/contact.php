@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang='en'>
+
+<?php require_once("tools.php"); ?>
+
 <head>
   <meta charset="utf-8">
   <meta name="Tom O'Neill" content="Assignment 2">
