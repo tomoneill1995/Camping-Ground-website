@@ -5,7 +5,7 @@
   
     require_once("tools.php"); 
     session_start(); 
-    $_POST = $_Session["Booking"];
+    $_POST = $_SESSION["Booking"];
     
   ?>
 

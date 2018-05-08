@@ -51,6 +51,21 @@ $footer = <<<HTML
       <br>
       Maintain links to your working <a href='/~s3488614/wp/a2/style-guide.pdf'>style guide</a>, your <a href='../mailing.txt'>products spreadsheet</a> and <a href='../orders.txt'>orders spreadsheet</a> here.
   </footer>
+
+  <aside id='debug'>
+    <details open>
+      <summary>=Debug Show/Hide</summary>
+        <pre>
+         <!-- <?php $_SESSION contains: 
+          print_r($_SESSION); 
+
+          $_POST contains:
+         print_r($_POST); ?> -->
+    </pre>
+  </details>
+</aside>  
+
+
 HTML;
 
 
