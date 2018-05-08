@@ -9,15 +9,42 @@
 
 
 
+
+
     echo $head;
   
   ?>
+
+
+  <script>
+  
+    function setCurrentlyPressed(pressed) {
+
+
+      var aid = document.getElementByID("aid").value; 
+
+      var oldPressed = document.getElementsByClassName("AIDPressed"); //Clear the currently selected value
+      for(var i = 0; i < oldPressed.length; i++){
+        oldPressed[i].classList.remove("AIDPressed");
+      }
+      pressed.classList.add("AIDPressed"); //Add the new pressed button
+      aid = pressed.id; //add the new aid
+
+    }
+
+    function validateBooking() {
+
+    }
+  
+  </script>
 
 
 <body>
 
   <?php 
     echo $header;
+
+    print_r($_SESSION);
   ?>
 
   <main>
@@ -35,7 +62,7 @@
       <h1 class="white"> Unpowered</h1>
     </article>
 
-    <button class="button" id="US">
+    <button class="button" id="US" onclick="setCurrentlyPressed(this);">
       <img src="../media/Tent.png" alt="Tent" class="placeholder"> 
       <!-- Original Image below sourced for educational purposes: -->
       <!-- https://www.kisspng.com/png-camping-tent-campsite-campfire-clip-art-sick-dog-c-667961/download-png.html -->
@@ -48,7 +75,7 @@
         $5.00 Per addtional Child</p>  
     </button>
 
-    <button id="UM" class="button">
+    <button  class="button" id="UM" onclick="setCurrentlyPressed(this);">
       <img src="../media/Tent.png" alt="Tent" class="placeholder"> 
       <!-- Original Image below sourced for educational purposes: -->
       <!-- https://www.kisspng.com/png-camping-tent-campsite-campfire-clip-art-sick-dog-c-667961/download-png.html -->
@@ -67,7 +94,7 @@
       <h1 class="white"> Powered </h1>
     </article>
 
-    <button id="PS" class="button">
+    <button class="button" id="PS" onclick="setCurrentlyPressed(this);">
       <img src="../media/Tent.png" alt="Tent" class="placeholder"> 
       <!-- Original Image below sourced for educational purposes: -->
       <!-- https://www.kisspng.com/png-camping-tent-campsite-campfire-clip-art-sick-dog-c-667961/download-png.html -->
@@ -81,7 +108,7 @@
           $5.00 Per Addtional Child </p>
     </button>
 
-    <button id="PM" class="button">
+    <button class="button" id="PM" onclick="setCurrentlyPressed(this);">
       <img src="../media/Tent.png" alt="Tent" class="placeholder"> 
       <!-- Original Image below sourced for educational purposes: -->
       <!-- https://www.kisspng.com/png-camping-tent-campsite-campfire-clip-art-sick-dog-c-667961/download-png.html -->
@@ -100,7 +127,7 @@
       <h1 class="white"> Caravan and Booking </h1>
     </article>
   
-    <button id="Caravan" class="button">
+    <button  class="button" id="C" onclick="setCurrentlyPressed(this);">
       <img src="../media/Caravan.png" alt="Caravan" class="placeholder">
       <!-- Original Image below sourced for educational purposes: -->
       <!-- https://www.pinterest.co.uk/pin/96545985745543687/ -->
@@ -115,8 +142,8 @@
   </button>
 
     <div id="Booking" class="button alignRight inlineFlex"> 
-      <form onsubmit="" method="POST" action="https://titan.csit.rmit.edu.au/~e54061/wp/processing.php?ref=accommodation">
-        <input type="hidden" name="aid" value="C">
+      <form onsubmit="return validateBooking()" method="POST" action="https://titan.csit.rmit.edu.au/~e54061/wp/processing.php?ref=accommodation">
+        <input type="hidden" name="aid" id="aid">
         <label>Arrival Date: </label> <input type="date" name="date" class="dateInput" required> <br>
 
         <label>Duration of Stay: </label>
