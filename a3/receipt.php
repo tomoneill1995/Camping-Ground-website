@@ -5,8 +5,11 @@
     session_start(); 
     $_POST = $_SESSION["Booking"];
 
+
+    echo $head;
+
     echo $footer;
 
 
-    
+
 ?>

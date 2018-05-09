@@ -58,15 +58,15 @@ HTML;
 function debug() {
     $debug= <<<DEBUG
 
-    aside id='debug'>
+    <aside id='debug'>
     <details open>
       <summary>=Debug Show/Hide</summary>
         <pre>
-         <?php $_SESSION contains: 
-          print_r($_SESSION); 
+         . $_SESSION . contains: 
+         . print_r($_SESSION,true) .
 
-          $_POST contains:
-         print_r($_POST); ?> 
+          $_POST . contains:
+         . print_r($_POST,true) .
     </pre>
   </details>
 </aside>  

@@ -5,7 +5,7 @@
   $_POST = $_SESSION["Booking"];
 //Add the finalisation bookin page here
 
-
+  echo $head;
   
 
 ?>

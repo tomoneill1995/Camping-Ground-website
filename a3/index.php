@@ -1,7 +1,4 @@
-<!DOCTYPE html>
-<html lang='en'>
-
-  <?php 
+<?php 
   
     require_once("tools.php"); 
     session_start(); 
