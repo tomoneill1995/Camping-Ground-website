@@ -12,14 +12,11 @@
   <script>
   
     function setCurrentlyPressed(pressed) {
-
-      console.log(pressed);
       
       var aid = document.getElementById("aid").value; 
-      console.log(aid);
       if (aid == pressed.id) {  //if current pressed is 'deslected'
         pressed.classList.remove("AIDPressed");
-        aid = ""; //default aid is empty, check this before submission 
+        document.getElementById("aid").value = ""; //default aid is empty, check this before submission 
       }
       else { //else select the newly pressed button
 
@@ -28,17 +25,71 @@
           oldPressed[i].classList.remove("AIDPressed");
         }
         pressed.classList.add("AIDPressed"); //Add the new pressed button
-        aid = pressed.id; //add the new aid
+        document.getElementById("aid").value = pressed.id; //add the new aid
 
       }
-
-     
 
     }
 
     function validateBooking() {
 
     }
+
+    function calculateCost() {
+
+      var days = parseInt(document.getElementById("days").value);
+      var adults = parseInt(document.getElementById("adults").value);
+      var children = parseInt(document.getElementById("children").value);
+      var totalCost = document.getElementById("totalCost").value;
+      var totalGST = document.getElementById("totalGST").value;
+      
+
+      var nightsPerID = {US:35.25,US:40.50,PS:50.25,PM:60.50,C:100};
+      var adultsPerID = 10;
+      var adultsPerID = 5;
+
+      var aid = document.getElementById("aid").value;
+
+      if((days == 0 || adults == 0 || children == 0 || aid == "")){
+        return false;
+      }
+
+      console.log(days);
+      console.log(adults);
+      console.log(children);
+
+      if (aid == 'C') {
+        totalCost = (nightsPerID[aid] * days); //base rate * nights
+      }
+ 
+      else if((adults + children) <= 2) {
+        totalCost = (nightsPerID[aid] * days); //base rate * nights
+      }
+
+      else {
+        if (adults >= 2 ) {  //if theres two adults, that counts our minimum cost
+          totalCost = (nightsPerID[aid] * days);
+          totalCost += ((adults - 2) *  10);
+          totalCost += ((children) *  5);
+        }
+        else { //Otherwise we have only 1 adult and the rest are children
+          totalCost = (nightsPerID[aid] * days);
+          totalCost += ((adults - 1 ) *  10);
+          totalCost += ((children -1 ) *  5);
+        }
+      }
+
+      
+
+
+      document.getElementById("totalCost").innerHTML = totalCost;
+      document.getElementById("totalGST").innerHTML = totalCost/11;
+      console.log(totalCost);
+      console.log(totalCost/11);
+      
+    }
+
+    setInterval(function() { calculateCost(); }, 200);
   
   </script>
 
@@ -151,7 +202,7 @@
         <label>Arrival Date: </label> <input type="date" name="date" class="dateInput" required> <br>
 
         <label>Duration of Stay: </label>
-          <select  name="days" class="Width150" required> 
+          <select id="days" name="days" class="Width150" required>  
             <option value=""># Of Days </option>
             <option value="1" >1</option>
             <option value="2" >2</option>
@@ -169,8 +220,8 @@
             <option value="14" >14</option>
           </select> <br>
 
-          <label>Number of Adults:  </label>
-          <select name="adults" class="Width150" required> 
+          <label>Number of Adults:  </label>  
+          <select id="adults" name="adults" class="Width150" required> 
             <option value=""># Of Adults </option>
             <option value="1" >1</option>
             <option value="2" >2</option>
@@ -185,8 +236,8 @@
           </select>  
           <br>
 
-          <label>Number of Children:  </label>
-          <select name="children" class="Width150" required> 
+          <label>Number of Children:  </label>  
+          <select id="children" name="children" class="Width150" required> 
             <option value=""># Of Children </option>
             <option value="0" >0</option>
             <option value="1" >1</option>
@@ -202,7 +253,7 @@
           </select>    
 
         <p id="totalCost" class="white">Total:</p> <!-- ID Added for A3, dynamic calculation -->
-        <br>
+        <br>  
         <p id="totalGST" class="white">GST:</p>  <!-- ID Added for A3, dynamic calculation -->
         <input type="submit" class="submitButton" value="Submit Booking">
       </form>
