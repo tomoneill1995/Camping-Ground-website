@@ -190,7 +190,7 @@
   </button>
 
     <div id="Booking" class="button alignRight inlineFlex"> 
-      <form onsubmit="return validateBooking()" method="POST" action="https://titan.csit.rmit.edu.au/~e54061/wp/processing.php?ref=accommodation">
+      <form onsubmit="return validateBooking()" method="POST" action="/booking.php">
         <input type="hidden" name="aid" id="aid">
         <label>Arrival Date: </label> <input type="date" name="date" class="dateInput" required> <br>
 

@@ -2,10 +2,22 @@
 
   require_once("tools.php");
   session_start(); 
-  $_POST = $_SESSION["Booking"];
-//Add the finalisation bookin page here
+
 
   echo $head;
+
+  print_r($_POST);
+  
+
+
+  $_POST = $_SESSION["booking"];
+
+  print_r($_SESSION["booking"]);
+//Add the finalisation bookin page here
+
+
+
+  
   
 
 ?>
