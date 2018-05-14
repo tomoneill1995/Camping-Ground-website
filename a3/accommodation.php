@@ -14,16 +14,25 @@
     function setCurrentlyPressed(pressed) {
 
       console.log(pressed);
+      
       var aid = document.getElementById("aid").value; 
-
-      //if AID = this.id, deselect
-
-      var oldPressed = document.getElementsByClassName("AIDPressed"); //Clear the currently selected value
-      for(var i = 0; i < oldPressed.length; i++){
-        oldPressed[i].classList.remove("AIDPressed");
+      console.log(aid);
+      if (aid == pressed.id) {  //if current pressed is 'deslected'
+        pressed.classList.remove("AIDPressed");
+        aid = ""; //default aid is empty, check this before submission 
       }
-      pressed.classList.add("AIDPressed"); //Add the new pressed button
-      aid = pressed.id; //add the new aid
+      else { //else select the newly pressed button
+
+        var oldPressed = document.getElementsByClassName("AIDPressed"); //Clear the currently selected value
+        for(var i = 0; i < oldPressed.length; i++) {
+          oldPressed[i].classList.remove("AIDPressed");
+        }
+        pressed.classList.add("AIDPressed"); //Add the new pressed button
+        aid = pressed.id; //add the new aid
+
+      }
+
+     
 
     }
 

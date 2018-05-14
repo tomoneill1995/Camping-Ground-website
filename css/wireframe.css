@@ -394,5 +394,6 @@ th{
 .AIDPressed {
 
   border: 2px dotted black;
-  padding: 2px;
+  box-shadow: 5px 5px #888888;
+  background-color: hsl(199, 28%, 17%,80%);
 }
