@@ -50,40 +50,45 @@
 
       var aid = document.getElementById("aid").value;
 
-      if((days == 0 || adults == 0 || children == 0 || aid == "")){
-        return false;
-      }
-
       console.log(days);
       console.log(adults);
       console.log(children);
+      console.log(aid);
+
+      if((days == NaN || adults == NaN || children == NaN || aid == "")) {
+        document.getElementById("totalCost").innerHTML = "Total: $";
+        document.getElementById("totalGST").innerHTML = "GST: $";
+        return false;
+      }
+
+      
 
       if (aid == 'C') {
-        totalCost = (nightsPerID[aid] * days); //base rate * nights
+        totalCost = (nightsPerID[aid] * days); console.log(totalCost + "1"); //base rate * nights 
       }
- 
+      
       else if((adults + children) <= 2) {
-        totalCost = (nightsPerID[aid] * days); //base rate * nights
-      }
+        totalCost = (nightsPerID[aid] * days); //base rate * nights console.log(totalCost + "2");
+      } 
 
       else {
         if (adults >= 2 ) {  //if theres two adults, that counts our minimum cost
           totalCost = (nightsPerID[aid] * days);
           totalCost += ((adults - 2) *  10);
-          totalCost += ((children) *  5);
+          totalCost += ((children) *  5);  console.log(totalCost + "3");
         }
         else { //Otherwise we have only 1 adult and the rest are children
           totalCost = (nightsPerID[aid] * days);
           totalCost += ((adults - 1 ) *  10);
           totalCost += ((children -1 ) *  5);
         }
-      }
+      } console.log(totalCost + "4");
 
       
 
 
-      document.getElementById("totalCost").innerHTML = totalCost;
-      document.getElementById("totalGST").innerHTML = totalCost/11;
+      document.getElementById("totalCost").innerHTML = "Total: $" + totalCost;
+      document.getElementById("totalGST").innerHTML = "GST: $" + totalCost/11;
       console.log(totalCost);
       console.log(totalCost/11);
       
