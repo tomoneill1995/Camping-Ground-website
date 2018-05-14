@@ -1,15 +1,8 @@
-<!DOCTYPE html>
-<html lang='en'>
-
-  <?php 
+<?php 
     
     require_once("tools.php"); 
     session_start(); 
     $_POST = $_SESSION["Booking"];
-
-
-
-
 
     echo $head;
   
@@ -20,8 +13,10 @@
   
     function setCurrentlyPressed(pressed) {
 
+      console.log(pressed);
+      var aid = document.getElementById("aid").value; 
 
-      var aid = document.getElementByID("aid").value; 
+      //if AID = this.id, deselect
 
       var oldPressed = document.getElementsByClassName("AIDPressed"); //Clear the currently selected value
       for(var i = 0; i < oldPressed.length; i++){
@@ -62,7 +57,7 @@
       <h1 class="white"> Unpowered</h1>
     </article>
 
-    <button class="button" id="US" onclick="setCurrentlyPressed(this);">
+    <button type="button" class="button" id="US" onclick="setCurrentlyPressed(this);">
       <img src="../media/Tent.png" alt="Tent" class="placeholder"> 
       <!-- Original Image below sourced for educational purposes: -->
       <!-- https://www.kisspng.com/png-camping-tent-campsite-campfire-clip-art-sick-dog-c-667961/download-png.html -->
@@ -75,7 +70,7 @@
         $5.00 Per addtional Child</p>  
     </button>
 
-    <button  class="button" id="UM" onclick="setCurrentlyPressed(this);">
+    <button type="button" class="button" id="UM" onclick="setCurrentlyPressed(this);">
       <img src="../media/Tent.png" alt="Tent" class="placeholder"> 
       <!-- Original Image below sourced for educational purposes: -->
       <!-- https://www.kisspng.com/png-camping-tent-campsite-campfire-clip-art-sick-dog-c-667961/download-png.html -->
@@ -94,7 +89,7 @@
       <h1 class="white"> Powered </h1>
     </article>
 
-    <button class="button" id="PS" onclick="setCurrentlyPressed(this);">
+    <button type="button" class="button" id="PS" onclick="setCurrentlyPressed(this);">
       <img src="../media/Tent.png" alt="Tent" class="placeholder"> 
       <!-- Original Image below sourced for educational purposes: -->
       <!-- https://www.kisspng.com/png-camping-tent-campsite-campfire-clip-art-sick-dog-c-667961/download-png.html -->
@@ -108,7 +103,7 @@
           $5.00 Per Addtional Child </p>
     </button>
 
-    <button class="button" id="PM" onclick="setCurrentlyPressed(this);">
+    <button type="button" class="button" id="PM" onclick="setCurrentlyPressed(this);">
       <img src="../media/Tent.png" alt="Tent" class="placeholder"> 
       <!-- Original Image below sourced for educational purposes: -->
       <!-- https://www.kisspng.com/png-camping-tent-campsite-campfire-clip-art-sick-dog-c-667961/download-png.html -->
@@ -127,7 +122,7 @@
       <h1 class="white"> Caravan and Booking </h1>
     </article>
   
-    <button  class="button" id="C" onclick="setCurrentlyPressed(this);">
+    <button type="button"  class="button" id="C" onclick="setCurrentlyPressed(this);">
       <img src="../media/Caravan.png" alt="Caravan" class="placeholder">
       <!-- Original Image below sourced for educational purposes: -->
       <!-- https://www.pinterest.co.uk/pin/96545985745543687/ -->

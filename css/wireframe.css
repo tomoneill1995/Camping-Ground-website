@@ -389,3 +389,10 @@ th{
 .headerPadding {
   padding: 20px;
 }
+
+
+.AIDPressed {
+
+  border: 2px dotted black;
+  padding: 2px;
+}
