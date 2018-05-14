@@ -55,7 +55,7 @@
       console.log(children);
       console.log(aid);
 
-      if((days == NaN || adults == NaN || children == NaN || aid == "")) {
+      if((isNaN(days) || isNaN(adults) || isNaN(children) || aid == "")) {
         document.getElementById("totalCost").innerHTML = "Total: $";
         document.getElementById("totalGST").innerHTML = "GST: $";
         return false;
