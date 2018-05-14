@@ -44,27 +44,20 @@
       var totalGST = document.getElementById("totalGST").value;
       
 
-      var nightsPerID = {US:35.25,US:40.50,PS:50.25,PM:60.50,C:100};
+      var nightsPerID = {US:35.25,US:40.50,PS:50.25,PM:60.50,C:100}; //Match the selected AID to a nightly rate
       var adultsPerID = 10;
       var adultsPerID = 5;
 
       var aid = document.getElementById("aid").value;
 
-      console.log(days);
-      console.log(adults);
-      console.log(children);
-      console.log(aid);
-
-      if((isNaN(days) || isNaN(adults) || isNaN(children) || aid == "")) {
+      if((isNaN(days) || isNaN(adults) || isNaN(children) || aid == "")) { //if days,adults,children, or AID are unset, leave the function
         document.getElementById("totalCost").innerHTML = "Total: $";
         document.getElementById("totalGST").innerHTML = "GST: $";
         return false;
       }
 
-      
-
       if (aid == 'C') {
-        totalCost = (nightsPerID[aid] * days); console.log(totalCost + "1"); //base rate * nights 
+        totalCost = (nightsPerID[aid] * days);  //base rate * nights 
       }
       
       else if((adults + children) <= 2) {
@@ -75,22 +68,17 @@
         if (adults >= 2 ) {  //if theres two adults, that counts our minimum cost
           totalCost = (nightsPerID[aid] * days);
           totalCost += ((adults - 2) *  10);
-          totalCost += ((children) *  5);  console.log(totalCost + "3");
+          totalCost += ((children) *  5); 
         }
         else { //Otherwise we have only 1 adult and the rest are children
           totalCost = (nightsPerID[aid] * days);
           totalCost += ((adults - 1 ) *  10);
           totalCost += ((children -1 ) *  5);
         }
-      } console.log(totalCost + "4");
+      } 
 
-      
-
-
-      document.getElementById("totalCost").innerHTML = "Total: $" + totalCost;
-      document.getElementById("totalGST").innerHTML = "GST: $" + totalCost/11;
-      console.log(totalCost);
-      console.log(totalCost/11);
+      document.getElementById("totalCost").innerHTML = "Total: $" + totalCost.toFixed(2);
+      document.getElementById("totalGST").innerHTML = "GST: $" + (totalCost/11).toFixed(2);
       
     }
 
