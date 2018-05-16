@@ -32,33 +32,47 @@
                      'adults'=>$_POST["adults"],
                      'children'=>$_POST["children"]);
 
-  foreach($postArray as $value) {
+  function checkInputValidation($postArray) {
+    foreach($postArray as $value) {
     
-    if(validatePostInput($value) == false) {
-      //handle the error
-      echo("Vailed at Post Input");
+      if(validatePostInput($value) == false) {
+        //handle the error
+        echo("Vailed at Post Input");
+        return false;
+      }
+  
+      if(!(is_string($postArray["aid"]))) { //aid is not what we expect
+        //do something to handle error
+        echo("failed at aid");
+        return false;
+      }
+  
+      if(!(is_numeric($postArray["days"]))) { //aid is not what we expect
+        //do something to handle error
+        echo("failed at days");
+        return false;
+      }
+  
+      if(!(is_numeric($postArray["adults"]))) { //aid is not what we expect
+        //do something to handle error
+        echo("failed at adults");
+        return false;
+      }
+  
+      if(!(is_numeric($postArray["children"]))) { //aid is not what we expect
+        //do something to handle error
+        echo("failed at children");
+        return false;
+      }
     }
 
-    if(!(is_string($postArray["aid"]) { //aid is not what we expect
-      //do something to handle error
-      echo("Vailed at aid");
-    }
-
-    if(!(is_numeric($postArray["days"]) { //aid is not what we expect
-      //do something to handle error
-      echo("Vailed at days");
-    }
-
-    if(!(is_numeric($postArray["adults"]) { //aid is not what we expect
-      //do something to handle error
-      echo("Vailed at adults");
-    }
-
-    if(!(is_numeric($postArray["children"]) { //aid is not what we expect
-      //do something to handle error
-      echo("Vailed at children");
-    }
   }
+
+  if(!(checkInputValidation($postArray))){
+    echo "It failed mate";
+  }
+
+ 
 
 
   //Data validated, add it to our session variable and move forwards.
