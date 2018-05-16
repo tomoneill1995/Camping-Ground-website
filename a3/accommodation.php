@@ -1,8 +1,9 @@
 <?php 
     
     require_once("tools.php"); 
+    
     session_start(); 
-    $_POST = $_SESSION["Booking"];
+    $_SESSION["Booking"] = $_POST;
 
     echo $head;
   

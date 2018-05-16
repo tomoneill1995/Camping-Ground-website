@@ -78,4 +78,14 @@ DEBUG;
 }
 
 
+function validatePostInput ($postVar) {
+
+  if(isset($postVar) && !empty($postVar) ) {
+    return true;
+  }
+    
+}
+
+
+
 ?>
