@@ -212,13 +212,13 @@
       echo ("Data issue, please navigate back");
    
       echo '
-        <form id="dataRedirectAccommodation" action="/accomodation.php" method="post">
-          <input type="hidden" name="dataFailed" id="aid" value = "Yes">
+        <form id="dataRedirectAccommodation" action="/accommodation.php" method="post">
+          <input type="hidden" name="dataFailed" id="datafailed" value = "Yes">
         </form>
         <script type="text/javascript">
            document.getElementById("dataRedirectAccommodation").submit();
         </script>
-        '
+        ';
 
 
 
@@ -310,6 +310,7 @@
       <input type="hidden" name="days" id="days" value="">  
       <input type="hidden" name="adults" id="adults" value=""> 
       <input type="hidden" name="children" id="children" value=""> 
+      <input type="hidden" name="cancel" id="cancel" value="Yes"> 
       <input type="submit" class="submitButton" value="CANCEL Booking">
     </form>
   </div>

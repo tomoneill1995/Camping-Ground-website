@@ -3,7 +3,22 @@
     require_once("tools.php"); 
     
     session_start(); 
-    $_SESSION["Booking"] = $_POST;
+    echo("Session1");
+    print_r($_SESSION);
+    $_SESSION["Booking"] = $_POST; 
+
+    echo("Post");
+    print_r($_POST); 
+
+
+    if(isset($_POST['cancel']) && !empty($_POST['cancel']) && $_POST['cancel'] == "Yes") {
+      $_SESSION["Booking"]["aid"] = "";
+      $_SESSION["Booking"]["date"] = "";
+      $_SESSION["Booking"]["days"] = "";
+      $_SESSION["Booking"]["adults"] = "";
+      $_SESSION["Booking"]["children"] = "";
+
+    }     
 
     echo $head;
   
@@ -103,10 +118,10 @@
   <?php 
     echo $header;
 
-    if(isset($_POST['dataFailed']) && !empty($_POST['dataFailed']) && $_POST['dataFailed'] == "Yes" ) {
+    if(isset($_POST['dataFailed']) && !empty($_POST['dataFailed']) && $_POST['dataFailed'] == "Yes") {
       echo "<p> Data failure from Booking page, please resubmit </p>";
     }           
-
+    echo "session2";
     print_r($_SESSION);
   ?>
 
