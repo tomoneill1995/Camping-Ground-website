@@ -8,6 +8,10 @@
 
   echo("POST:");
   print_r($_POST);
+
+  $name;
+  $email;
+  $phone;
   
   $aid;
   $date;
@@ -209,6 +213,7 @@
 
 
     if($valid == false){
+      //Accommodation Issues, Need to create one for contact details
       echo ("Data issue, please navigate back");
    
       echo '
@@ -304,7 +309,7 @@
   <p class="white"> Total Cost: $ <?php echo number_format(($totalCost), 2, '.', '');; ?> <br> </p>
   <p class="white"> Total GST: $ <?php echo number_format(($totalCost/11), 2, '.', ''); ?>  </p>
 
-    <form onsubmit="return validateBooking()" method="POST" action="/accommodation.php">
+    <form onsubmit="" method="POST" action="/accommodation.php">
       <input type="hidden" name="aid" id="aid" value = "">
       <input type="hidden" name="date" value =""> 
       <input type="hidden" name="days" id="days" value="">  
@@ -313,6 +318,17 @@
       <input type="hidden" name="cancel" id="cancel" value="Yes"> 
       <input type="submit" class="submitButton" value="CANCEL Booking">
     </form>
+
+
+    <form onsubmit="" method="POST" action="/receipt.php">
+      <input type="hidden" name="aid" id="aid" value = "<?php echo $aid ?>">
+      <input type="hidden" name="date" value = "<?php echo $date ?>"> 
+      <input type="hidden" name="days" id="days" value="<?php echo $days ?>">  
+      <input type="hidden" name="adults" id="adults" value="<?php echo $adults ?>"> 
+      <input type="hidden" name="children" id="children" value="<?php echo $children ?>"> 
+      <input type="submit" class="submitButton" value="Accept Booking">
+    </form>
+
   </div>
 
 </main>
