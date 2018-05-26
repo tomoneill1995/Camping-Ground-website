@@ -273,6 +273,35 @@
 ?>
 
 
+<script>
+
+
+  function validateBooking() {
+
+
+      var name = document.getElementById("name").value;
+      var regexName = / ^[a-zA-Z] $/;
+      if (!(regexName.test(name))) {
+        return false;
+      }
+
+      var email = document.getElementById("email").value;
+      var regexEmail = / ^[a-zA-Z] @ [a-zA-Z] . [a-zA-Z] $/;
+      if (!(regexEmail.test(email))) {
+        return false;
+      }
+
+      var phone = document.getElementById("phone").value;
+      var regexPhone = / ^(\(04\)|04|\+614)[ ]?\d{4}[ ]?\d{4}$ / ;
+      if (!(regexPhone.test(phone))) {
+        return false;
+      }
+
+  }
+
+</script>
+
+
 <body>
 
 
@@ -285,43 +314,64 @@
  
 <main>
 
-  <div id="Booking" class="button inlineFlex"> 
-  
-  <p class="white"> Customer Name:</p>
-  <p class="white"> Email: </p>
-  <p class="white"> phone: </p>
+    <article class="accHeading">
+      <h1 class="white"> Booking Information</h1>
+    </article>
 
-  <p class="white"> Campsite: <?php echo $namePerID[$aid];  ?> </p>
-  <p class="white"> Arrival Date: <?php echo $date; ?> </p>
-  <p class="white"> Duration of Stay: <?php echo $days; ?> </p>
-  <p class="white"> Number of Adults:<?php echo $adults; ?>  </p>
+  <div id="Booking" class="button inlineFlex width100Percent"> 
+
+  <p class="white"> Campsite: <?php echo $namePerID[$aid];  ?> </p> <br>
+  <p class="white"> Arrival Date: <?php echo $date; ?> </p> <br>
+  <p class="white"> Duration of Stay: <?php echo $days; ?> </p> <br>
+  <p class="white"> Number of Adults:<?php echo $adults; ?>  </p> <br>
   <p class="white"> Number of Children: <?php echo $children; ?>  </p>
-  <p class="white"> Total Cost: $ <?php echo number_format(($totalCost), 2, '.', '');; ?> <br> </p>
-  <p class="white"> Total GST: $ <?php echo number_format(($totalCost/11), 2, '.', ''); ?>  </p>
+  <p class="white"> Total Cost: $ <?php echo number_format(($totalCost), 2, '.', '');; ?> <br> </p> <br>
+  <p class="white"> Total GST: $ <?php echo number_format(($totalCost/11), 2, '.', ''); ?>  </p> <br>
 
     <form onsubmit="" method="POST" action="/accommodation.php">
       <input type="hidden" name="aid" id="aid" value = "">
       <input type="hidden" name="date" value =""> 
-      <input type="hidden" name="days" id="days" value="">  
+      <input type="hidden" name="days" id="days" value="">
       <input type="hidden" name="adults" id="adults" value=""> 
-      <input type="hidden" name="children" id="children" value=""> 
+      <input type="hidden" name="children" id="children" value="">
       <input type="hidden" name="cancel" id="cancel" value="Yes"> 
-      <input type="submit" class="submitButton" value="CANCEL Booking">
+      <br>
+      <br>
+      <input type="submit" class="submitButton cancelButton" value="CANCEL Booking">
     </form>
 
     <br>
     <br> 
+    </div>
 
-    <form onsubmit="" method="POST" action="/receipt.php">
-      <input type="hidden" name="aid" id="aid" value = "<?php echo $aid ?>">
-      <input type="hidden" name="date" value = "<?php echo $date ?>"> 
-      <input type="hidden" name="days" id="days" value="<?php echo $days ?>">  
-      <input type="hidden" name="adults" id="adults" value="<?php echo $adults ?>"> 
-      <input type="hidden" name="children" id="children" value="<?php echo $children ?>"> 
-      <input type="submit" class="submitButton" value="Accept Booking">
-    </form>
+    <article class="accHeading">
+      <h1 class="white"> Customer Information</h1>
+    </article>
 
-  </div>
+    <div id="Booking" class="button inlineFlex width100Percent"> 
+
+
+      
+
+      <form onsubmit="return validateBooking()" method="POST" action="/receipt.php">
+     
+        <label>Customer Name: </label> <input type="text" name="name" class="Width150" required> <br>
+        <label>Email: </label> <input type="email" name="email" class="Width150" required> <br>
+        <label>Phone: </label> <input type="number" name="phone" class="Width150" required> <br>
+
+        <input type="hidden" name="aid" id="aid" value = "<?php echo $aid ?>">
+        <input type="hidden" name="date" value = "<?php echo $date ?>"> 
+        <input type="hidden" name="days" id="days" value="<?php echo $days ?>">  
+        <input type="hidden" name="adults" id="adults" value="<?php echo $adults ?>"> 
+        <input type="hidden" name="children" id="children" value="<?php echo $children ?>"> 
+        <br>
+        <br>
+        <input type="submit" class="submitButton" value="Accept Booking">
+      </form>
+
+    </div>
+
+  
 
 </main>
 

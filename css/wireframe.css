@@ -271,6 +271,7 @@ max-width: 60%;
   margin-top: 10px;
   margin-left: 38%;
 }
+
 #contactform{
   padding-left: 10%;
 }
@@ -365,6 +366,9 @@ th{
   padding: 5px;
   margin: 5px;
 }
+.width100Percent {
+  width: 100%;
+}
 
 .dateInput {
   width: 140px;
@@ -376,6 +380,11 @@ th{
   width: 150px;
   padding:5px;
   border-radius: 5%;
+}
+
+.cancelButton {
+  color: white;
+  background: red;
 }
 
 .inlineFlex {
