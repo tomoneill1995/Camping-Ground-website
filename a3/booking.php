@@ -301,7 +301,7 @@
   <p class="white"> Duration of Stay: <?php echo $days; ?> </p>
   <p class="white"> Number of Adults:<?php echo $adults; ?>  </p>
   <p class="white"> Number of Children: <?php echo $children; ?>  </p>
-  <p class="white"> Total Cost: $ <?php echo $totalCost; ?> <br> </p>
+  <p class="white"> Total Cost: $ <?php echo number_format(($totalCost), 2, '.', '');; ?> <br> </p>
   <p class="white"> Total GST: $ <?php echo number_format(($totalCost/11), 2, '.', ''); ?>  </p>
 
     <form onsubmit="return validateBooking()" method="POST" action="/accommodation.php">

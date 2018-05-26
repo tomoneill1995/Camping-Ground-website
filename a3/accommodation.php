@@ -12,11 +12,14 @@
 
 
     if(isset($_POST['cancel']) && !empty($_POST['cancel']) && $_POST['cancel'] == "Yes") {
-      $_SESSION["Booking"]["aid"] = "";
-      $_SESSION["Booking"]["date"] = "";
-      $_SESSION["Booking"]["days"] = "";
-      $_SESSION["Booking"]["adults"] = "";
-      $_SESSION["Booking"]["children"] = "";
+
+      unset($_SESSION['Booking']);
+
+      // $_SESSION["Booking"]["aid"] = "";
+      // $_SESSION["Booking"]["date"] = "";
+      // $_SESSION["Booking"]["days"] = "";
+      // $_SESSION["Booking"]["adults"] = "";
+      // $_SESSION["Booking"]["children"] = "";
 
     }     
 
