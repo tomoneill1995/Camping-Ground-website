@@ -291,7 +291,7 @@
       }
 
       var email = document.getElementById("email").value;
-      var regexEmail = /^[a-zA-Z]+@[a-zA-Z]+.[a-zA-Z]+$/;
+      var regexEmail = /^[a-zA-Z0-9]+@[a-zA-Z]+.[a-zA-Z]+$/;
       if (!(regexEmail.test(email))) {
         console.log("emailerror");
         document.getElementById("emailError").innerHTML = "Please enter a correct email";
