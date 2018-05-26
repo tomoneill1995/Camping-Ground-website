@@ -55,7 +55,7 @@
       var totalCost = document.getElementById("totalCost").value;
       var totalGST = document.getElementById("totalGST").value;
       
-      var nightsPerID = {US:35.25,US:40.50,PS:50.25,PM:60.50,C:100}; //Match the selected AID to a nightly rate
+      var nightsPerID = {US:35.25,UM:40.50,PS:50.25,PM:60.50,C:100}; //Match the selected AID to a nightly rate
       var adultsPerID = 10;
       var adultsPerID = 5;
 

@@ -223,7 +223,10 @@
       //Add the finalisation bookin page here
 
      
-      $nightsPerID = array('US'=>35.25,'US'=>40.50,'PS'=>50.25,'PM'=>60.50,'C'=>100); //Match the selected AID to a nightly rate
+      $nightsPerID = array('US'=>35.25,'UM'=>40.50,'PS'=>50.25,'PM'=>60.50,'C'=>100); //Match the selected AID to a nightly rate
+      $namePerID = array('US'=>"Unpowered Small Site",'UM'=>"Unpowered Medium Site",
+                         'PS'=>"Powered Small Site",'PM'=>"Powered Medium Site",
+                         'C'=>"Caravan Site");
       $adultsPerID = 10;
       $adultsPerID = 5;
 
@@ -254,10 +257,7 @@
         }
       } 
 
-
-      echo("Total cost" . $totalCost . "\\n");
-      echo("Total gst" .  number_format(($totalCost/11), 2, ',', ' ') );
-
+     
     }
   
 
@@ -267,7 +267,29 @@
 <body>
 
 
-<?php echo $header; ?>
+<?php 
+
+  echo $header;
+ 
+  echo "
+
+
+
+
+  <p> Customer Name:</p>
+  <p> Email: $date </p>
+  <p> phone: $days </p>
+
+  <p> Campsite: $namePerID[$aid] </p>
+  <p> Arrival Date: $date </p>
+  <p> Duration of Stay: $days </p>
+  <p>Number of Adults: $adults  </p>
+  <p>Number of Children: $children  </p>
+  <p> Total cost: $$totalCost <br> </p>
+  <p>Total GST: $" . number_format(($totalCost/11), 2, '.', '') . "</p>
+  ";
+
+?>
 
  
 <main>
