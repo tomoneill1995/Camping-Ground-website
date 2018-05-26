@@ -212,7 +212,7 @@
     }
 
 
-    if($valid == false){
+    if($valid == false) {
       //Accommodation Issues, Need to create one for contact details
       // Need to check if the data is set, if it is, accept it? 
       echo ("Data issue, please navigate back");
@@ -225,16 +225,9 @@
            document.getElementById("dataRedirectAccommodation").submit();
         </script>
         ';
-
-
-
       //  header('Location: /accommodation.php');
-
     }
-
     else{
-
-
       //Data validated, add it to our session variable and move forwards.
   
       $_SESSION["booking"] = $_POST;
@@ -242,7 +235,6 @@
       print_r($_SESSION["booking"]);
       //Add the finalisation bookin page here
 
-     
       $nightsPerID = array('US'=>35.25,'UM'=>40.50,'PS'=>50.25,'PM'=>60.50,'C'=>100); //Match the selected AID to a nightly rate
       $namePerID = array('US'=>"Unpowered Small Site",'UM'=>"Unpowered Medium Site",
                          'PS'=>"Powered Small Site",'PM'=>"Powered Medium Site",
@@ -276,10 +268,7 @@
           $totalCost += (($children -1 ) *  5);
         }
       } 
-
-     
     }
-  
 
 ?>
 
@@ -320,6 +309,8 @@
       <input type="submit" class="submitButton" value="CANCEL Booking">
     </form>
 
+    <br>
+    <br> 
 
     <form onsubmit="" method="POST" action="/receipt.php">
       <input type="hidden" name="aid" id="aid" value = "<?php echo $aid ?>">
