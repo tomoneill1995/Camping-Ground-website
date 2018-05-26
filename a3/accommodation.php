@@ -15,6 +15,7 @@
     function setCurrentlyPressed(pressed) {
       
       var aid = document.getElementById("aid").value; 
+
       if (aid == pressed.id) {  //if current pressed is 'deslected'
         pressed.classList.remove("AIDPressed");
         document.getElementById("aid").value = ""; //default aid is empty, check this before submission 
@@ -33,6 +34,14 @@
     }
 
     function validateBooking() {
+      //check aid
+      var aid = document.getElementById("aid").value; 
+      if (aid == "US" || aid == "UM" || aid == "PS" || aid == "PM" || aid == "C"){
+        return true;
+      }
+      else {
+        return false;
+      }
 
     }
 
@@ -44,7 +53,6 @@
       var totalCost = document.getElementById("totalCost").value;
       var totalGST = document.getElementById("totalGST").value;
       
-
       var nightsPerID = {US:35.25,US:40.50,PS:50.25,PM:60.50,C:100}; //Match the selected AID to a nightly rate
       var adultsPerID = 10;
       var adultsPerID = 5;
