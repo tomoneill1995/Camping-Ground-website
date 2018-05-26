@@ -214,6 +214,7 @@
 
     if($valid == false){
       //Accommodation Issues, Need to create one for contact details
+      // Need to check if the data is set, if it is, accept it? 
       echo ("Data issue, please navigate back");
    
       echo '

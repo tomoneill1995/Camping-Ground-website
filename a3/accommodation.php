@@ -5,10 +5,16 @@
     session_start(); 
     echo("Session1");
     print_r($_SESSION);
-    $_SESSION["booking"] = $_POST; 
 
     echo("Post");
     print_r($_POST); 
+
+    if( isset($_POST) && !empty($_POST) ){
+      $_SESSION["booking"] = $_POST; 
+    }    
+    
+
+   
 
 
     if(isset($_POST['cancel']) && !empty($_POST['cancel']) && $_POST['cancel'] == "Yes") {
