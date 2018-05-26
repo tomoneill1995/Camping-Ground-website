@@ -281,23 +281,23 @@
 
       var name = document.getElementById("name").value;
       var regexName = / ^[a-zA-Z] $/;
-      console.log("executed");
+   
       if (!(regexName.test(name))) {
-        
+        document.getElementById("nameError").innerHTML = "Please only enter characters";
         return false;
       }
 
       var email = document.getElementById("email").value;
       var regexEmail = / ^[a-zA-Z] @ [a-zA-Z] . [a-zA-Z] $/;
       if (!(regexEmail.test(email))) {
-        console.log("executed2");
+        document.getElementById("emailError").innerHTML = "Please enter a correct email";
         return false;
       }
 
       var phone = document.getElementById("phone").value;
       var regexPhone = / ^(\(04\)|04|\+614)[ ]?\d{4}[ ]?\d{4}$ / ;
       if (!(regexPhone.test(phone))) {
-        console.log("executed3");
+        document.getElementById("phoneError").innerHTML = "Please enter a correct phone number";
         return false;
       }
       return false;
@@ -360,9 +360,17 @@
 
       <form onsubmit="return validateReceipt()" method="POST" action="/receipt.php">
      
-        <label>Customer Name: </label> <input type="text" id="name" name="name" class="Width150" required > <br>
-        <label>Email: </label> <input type="text" id="email" name="email" class="Width150" required> <br>
-        <label>Phone: </label> <input type="text" id="phone" name="phone" class="Width150" required> <br>
+        <label>Customer Name: </label> 
+          <input type="text" id="name" name="name" class="Width150" required > 
+          <p id="nameError" class="red"></p>  <br>
+
+        <label>Email: </label> 
+          <input type="text" id="email" name="email" placeholder="abc@rmit.com" class="Width150" required> 
+          <p id="emailError" class="red"></p> <br> 
+
+        <label>Phone: </label>
+           <input type="text" id="phone" name="phone" placeholder="04 1234 5678" class="Width150" required> 
+           <p id="phoneError" class="red"></p> <br>
 
         <input type="hidden" name="aid" id="aid" value = "<?php echo $aid ?>">
         <input type="hidden" name="date" value = "<?php echo $date ?>"> 
