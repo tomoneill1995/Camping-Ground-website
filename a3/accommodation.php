@@ -103,6 +103,10 @@
   <?php 
     echo $header;
 
+    if(isset($_POST['dataFailed']) && !empty($_POST['dataFailed']) && $_POST['dataFailed'] == "Yes" ) {
+      echo "<p> Data failure from Booking page, please resubmit </p>";
+    }           
+
     print_r($_SESSION);
   ?>
 

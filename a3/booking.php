@@ -210,6 +210,20 @@
 
     if($valid == false){
       echo ("Data issue, please navigate back");
+   
+      echo '
+        <form id="dataRedirectAccommodation" action="/accomodation.php" method="post">
+          <input type="hidden" name="dataFailed" id="aid" value = "Yes">
+        </form>
+        <script type="text/javascript">
+           document.getElementById("dataRedirectAccommodation").submit();
+        </script>
+        '
+
+
+
+      //  header('Location: /accommodation.php');
+
     }
 
     else{
@@ -270,35 +284,27 @@
 <?php 
 
   echo $header;
- 
-  echo "
-
-
-
-
-  
-  ";
 
 ?>
 
  
 <main>
 
-  <div id="Booking" class="button alignRight inlineFlex"> 
+  <div id="Booking" class="button inlineFlex"> 
   
-  <p> Customer Name:</p>
-  <p> Email: $date </p>
-  <p> phone: $days </p>
+  <p class="white"> Customer Name:</p>
+  <p class="white"> Email: </p>
+  <p class="white"> phone: </p>
 
-  <p> Campsite: <?php echo $namePerID[$aid]  ?> </p>
-  <p> Arrival Date: <?php echo $date ?> </p>
-  <p> Duration of Stay: <?php echo $days ?> </p>
-  <p> Number of Adults:<?php echo $adults ?>  </p>
-  <p> Number of Children: <?php echo $children ?>  </p>
-  <p> Total cost: $ <?php echo $totalCost ?> <br> </p>
-  <p> Total GST: $ <?php  number_format(($totalCost/11), 2, '.', '') ?>  </p>
+  <p class="white"> Campsite: <?php echo $namePerID[$aid];  ?> </p>
+  <p class="white"> Arrival Date: <?php echo $date; ?> </p>
+  <p class="white"> Duration of Stay: <?php echo $days; ?> </p>
+  <p class="white"> Number of Adults:<?php echo $adults; ?>  </p>
+  <p class="white"> Number of Children: <?php echo $children; ?>  </p>
+  <p class="white"> Total Cost: $ <?php echo $totalCost; ?> <br> </p>
+  <p class="white"> Total GST: $ <?php echo number_format(($totalCost/11), 2, '.', ''); ?>  </p>
 
-    <form onsubmit="return validateBooking()" method="POST" action="/booking.php">
+    <form onsubmit="return validateBooking()" method="POST" action="/accommodation.php">
       <input type="hidden" name="aid" id="aid" value = "">
       <input type="hidden" name="date" value =""> 
       <input type="hidden" name="days" id="days" value="">  
