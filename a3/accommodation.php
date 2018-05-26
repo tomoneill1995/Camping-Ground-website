@@ -37,9 +37,11 @@
       //check aid
       var aid = document.getElementById("aid").value; 
       if (aid == "US" || aid == "UM" || aid == "PS" || aid == "PM" || aid == "C"){
+        
         return true;
       }
       else {
+        document.getElementById("errorTag").innerHTML = "Campsite Not Set";
         return false;
       }
 
@@ -257,6 +259,7 @@
         <p id="totalCost" class="white">Total:</p> <!-- ID Added for A3, dynamic calculation -->
         <br>  
         <p id="totalGST" class="white">GST:</p>  <!-- ID Added for A3, dynamic calculation -->
+        <p id="errorTag" class="red"> </p>
         <input type="submit" class="submitButton" value="Submit Booking">
       </form>
     </div>

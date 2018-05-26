@@ -109,6 +109,11 @@ article
 .white{
   color: #fff;
 }
+.red{
+  color: #f00;
+}
+
+
 .accHeading {
   padding: 0 !important; 
   text-align: center;
