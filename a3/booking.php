@@ -276,17 +276,7 @@
 
 
 
-  <p> Customer Name:</p>
-  <p> Email: $date </p>
-  <p> phone: $days </p>
-
-  <p> Campsite: $namePerID[$aid] </p>
-  <p> Arrival Date: $date </p>
-  <p> Duration of Stay: $days </p>
-  <p>Number of Adults: $adults  </p>
-  <p>Number of Children: $children  </p>
-  <p> Total cost: $$totalCost <br> </p>
-  <p>Total GST: $" . number_format(($totalCost/11), 2, '.', '') . "</p>
+  
   ";
 
 ?>
@@ -294,6 +284,29 @@
  
 <main>
 
+  <div id="Booking" class="button alignRight inlineFlex"> 
+  
+  <p> Customer Name:</p>
+  <p> Email: $date </p>
+  <p> phone: $days </p>
+
+  <p> Campsite: <?php echo $namePerID[$aid]  ?> </p>
+  <p> Arrival Date: <?php echo $date ?> </p>
+  <p> Duration of Stay: <?php echo $days ?> </p>
+  <p> Number of Adults:<?php echo $adults ?>  </p>
+  <p> Number of Children: <?php echo $children ?>  </p>
+  <p> Total cost: $ <?php echo $totalCost ?> <br> </p>
+  <p> Total GST: $ <?php  number_format(($totalCost/11), 2, '.', '') ?>  </p>
+
+    <form onsubmit="return validateBooking()" method="POST" action="/booking.php">
+      <input type="hidden" name="aid" id="aid" value = "">
+      <input type="hidden" name="date" value =""> 
+      <input type="hidden" name="days" id="days" value="">  
+      <input type="hidden" name="adults" id="adults" value=""> 
+      <input type="hidden" name="children" id="children" value=""> 
+      <input type="submit" class="submitButton" value="CANCEL Booking">
+    </form>
+  </div>
 
 </main>
 
