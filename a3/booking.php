@@ -57,6 +57,11 @@
     }
     else{
       $valid = true;
+      $aid = $_POST["aid"];
+      $date = $_POST["date"];
+      $days = $_POST["days"];
+      $adults = $_POST["adults"];
+      $children = $_POST["children"];
     }
 
 
@@ -217,12 +222,44 @@
       print_r($_SESSION["booking"]);
       //Add the finalisation bookin page here
 
+     
+      $nightsPerID = array('US'=>35.25,'US'=>40.50,'PS'=>50.25,'PM'=>60.50,'C'=>100); //Match the selected AID to a nightly rate
+      $adultsPerID = 10;
+      $adultsPerID = 5;
+
+      $totalCost;
+      $aid = $GLOBALS["aid"];
+      $days = $GLOBALS["days"];
+      $adults = $GLOBALS["adults"];
+      $children = $GLOBALS["children"];
+
+      if ($aid == 'C') {
+        $totalCost = ($nightsPerID[$aid] * $days);  //base rate * nights, number of people don't count
+      }
       
+      else if(($adults + $children) <= 2) {
+        $totalCost = ($nightsPerID[$aid] * $days); //base rate * nights, by minimum number of people
+      } 
+
+      else {
+        if ($adults >= 2 ) {  //if theres two adults, that counts our minimum cost, then calculate the rest
+          $totalCost = ($nightsPerID[$aid] * $days);
+          $totalCost += (($adults - 2) *  10);
+          $totalCost += (($children) *  5); 
+        }
+        else { //Otherwise we have only 1 adult and the rest are children, this takes care of the other edge case
+          $totalCost = ($nightsPerID[$aid] * days);
+          $totalCost += (($adults - 1 ) *  10);
+          $totalCost += (($children -1 ) *  5);
+        }
+      } 
+
+
+      echo("Total cost" . $totalCost . "\\n");
+      echo("Total gst" .  number_format(($totalCost/11), 2, ',', ' ') );
 
     }
   
-    
-
 
 ?>
 
