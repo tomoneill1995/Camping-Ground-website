@@ -225,7 +225,7 @@
            document.getElementById("dataRedirectAccommodation").submit();
         </script>
         ';
-      //  header('Location: /accommodation.php');
+      
     }
     else{
       //Data validated, add it to our session variable and move forwards.
@@ -276,28 +276,33 @@
 <script>
 
 
-  function validateBooking() {
+  function validateReceipt() {
 
 
       var name = document.getElementById("name").value;
       var regexName = / ^[a-zA-Z] $/;
+      console.log("executed");
       if (!(regexName.test(name))) {
+        
         return false;
       }
 
       var email = document.getElementById("email").value;
       var regexEmail = / ^[a-zA-Z] @ [a-zA-Z] . [a-zA-Z] $/;
       if (!(regexEmail.test(email))) {
+        console.log("executed2");
         return false;
       }
 
       var phone = document.getElementById("phone").value;
       var regexPhone = / ^(\(04\)|04|\+614)[ ]?\d{4}[ ]?\d{4}$ / ;
       if (!(regexPhone.test(phone))) {
+        console.log("executed3");
         return false;
       }
-
+      return false;
   }
+
 
 </script>
 
@@ -323,10 +328,10 @@
   <p class="white"> Campsite: <?php echo $namePerID[$aid];  ?> </p> <br>
   <p class="white"> Arrival Date: <?php echo $date; ?> </p> <br>
   <p class="white"> Duration of Stay: <?php echo $days; ?> </p> <br>
-  <p class="white"> Number of Adults:<?php echo $adults; ?>  </p> <br>
-  <p class="white"> Number of Children: <?php echo $children; ?>  </p>
-  <p class="white"> Total Cost: $ <?php echo number_format(($totalCost), 2, '.', '');; ?> <br> </p> <br>
-  <p class="white"> Total GST: $ <?php echo number_format(($totalCost/11), 2, '.', ''); ?>  </p> <br>
+  <p class="white"> Number of Adults: <?php echo $adults; ?>  </p> <br>
+  <p class="white"> Number of Children: <?php echo $children; ?>  </p> <br>
+  <p class="white"> Total Cost: $<?php echo number_format(($totalCost), 2, '.', '');; ?> <br> </p> <br>
+  <p class="white"> Total GST: $<?php echo number_format(($totalCost/11), 2, '.', ''); ?>  </p> <br>
 
     <form onsubmit="" method="POST" action="/accommodation.php">
       <input type="hidden" name="aid" id="aid" value = "">
@@ -353,11 +358,11 @@
 
       
 
-      <form onsubmit="return validateBooking()" method="POST" action="/receipt.php">
+      <form onsubmit="return validateReceipt()" method="POST" action="/receipt.php">
      
-        <label>Customer Name: </label> <input type="text" name="name" class="Width150" required> <br>
-        <label>Email: </label> <input type="email" name="email" class="Width150" required> <br>
-        <label>Phone: </label> <input type="number" name="phone" class="Width150" required> <br>
+        <label>Customer Name: </label> <input type="text" id="name" name="name" class="Width150" required > <br>
+        <label>Email: </label> <input type="text" id="email" name="email" class="Width150" required> <br>
+        <label>Phone: </label> <input type="text" id="phone" name="phone" class="Width150" required> <br>
 
         <input type="hidden" name="aid" id="aid" value = "<?php echo $aid ?>">
         <input type="hidden" name="date" value = "<?php echo $date ?>"> 
