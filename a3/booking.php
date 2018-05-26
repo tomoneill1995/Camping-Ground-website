@@ -280,27 +280,38 @@
 
 
       var name = document.getElementById("name").value;
-      var regexName = / ^[a-zA-Z] $/;
+      var regexName = /^[a-zA-Z]+$/;
    
       if (!(regexName.test(name))) {
         document.getElementById("nameError").innerHTML = "Please only enter characters";
         return false;
       }
+      else{
+        document.getElementById("nameError").innerHTML = ""; 
+      }
 
       var email = document.getElementById("email").value;
-      var regexEmail = / ^[a-zA-Z] @ [a-zA-Z] . [a-zA-Z] $/;
+      var regexEmail = /^[a-zA-Z]+@[a-zA-Z]+.[a-zA-Z]+$/;
       if (!(regexEmail.test(email))) {
+        console.log("emailerror");
         document.getElementById("emailError").innerHTML = "Please enter a correct email";
         return false;
       }
+      else{
+        document.getElementById("emailError").innerHTML = ""; 
+      }
 
       var phone = document.getElementById("phone").value;
-      var regexPhone = / ^(\(04\)|04|\+614)[ ]?\d{4}[ ]?\d{4}$ / ;
+      var regexPhone = /^(\(04\)|04|\+614)[ ]?\d{4}[ ]?\d{4}$/ ;
       if (!(regexPhone.test(phone))) {
+        console.log("phoneError");
         document.getElementById("phoneError").innerHTML = "Please enter a correct phone number";
         return false;
       }
-      return false;
+      else{
+        document.getElementById("phoneError").innerHTML = ""; 
+      }
+      return true;
   }
 
 
