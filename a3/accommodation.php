@@ -5,7 +5,7 @@
     session_start(); 
     echo("Session1");
     print_r($_SESSION);
-    $_SESSION["Booking"] = $_POST; 
+    $_SESSION["booking"] = $_POST; 
 
     echo("Post");
     print_r($_POST); 
@@ -13,13 +13,9 @@
 
     if(isset($_POST['cancel']) && !empty($_POST['cancel']) && $_POST['cancel'] == "Yes") {
 
-      unset($_SESSION['Booking']);
 
-      // $_SESSION["Booking"]["aid"] = "";
-      // $_SESSION["Booking"]["date"] = "";
-      // $_SESSION["Booking"]["days"] = "";
-      // $_SESSION["Booking"]["adults"] = "";
-      // $_SESSION["Booking"]["children"] = "";
+      echo "booking removed";
+      unset($_SESSION['booking']);
 
     }     
 
