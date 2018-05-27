@@ -48,7 +48,7 @@
     <meta charset="utf-8">
     <meta name="Tom ONeill + Craig Robinson" content="Assignment 3">
     <title>Open Bay Caravan Park</title>
-    <link type="text/css" rel="stylesheet" href="/css/receipt.css"/>
+    <link type="text/css" rel="stylesheet" href="../css/receipt.css"/>
     <link href="https://fonts.googleapis.com/css?family=Cabin|Port+Lligat+Sans" rel="stylesheet">
     <!-- We will cover style later. Skip down to the body tag --> 
  </head>
