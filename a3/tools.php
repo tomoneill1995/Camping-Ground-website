@@ -53,9 +53,14 @@ $footer = <<<HTML
       Disclaimer: This website is not a real website and is being developed as part of a School of Science Web Programming course at RMIT University in Melbourne, Australia.
       <br>
       Maintain links to your working <a href='/~s3488614/wp/a2/style-guide.pdf'>style guide</a>, your <a href='../mailing.txt'>products spreadsheet</a> and <a href='../orders.txt'>orders spreadsheet</a> here.
-  </footer>
-
+  
+    </footer>
 HTML;
+
+function footer() {
+  echo $footer;
+  debug();
+}
 
 
 function debug() {
@@ -66,10 +71,10 @@ function debug() {
       <summary>=Debug Show/Hide</summary>
         <pre>
          . $_SESSION . contains: 
-         . print_r($_SESSION,true) .
+         {print_r($_SESSION,true)} .
 
           $_POST . contains:
-         . print_r($_POST,true) .
+          {print_r($_POST,true)}
     </pre>
   </details>
 </aside>  

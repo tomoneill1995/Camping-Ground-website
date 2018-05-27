@@ -18,6 +18,7 @@
       }
       else{  
         header("Location: /accommodation.php");
+        exit();
       }
     
     $aid = $_SESSION["booking"]["aid"];
@@ -61,10 +62,12 @@
         }
         else{
             header("Location: /accommodation.php");
+            exit();
         }  
     }
     else {
         header("Location: /accommodation.php");
+        exit();
     }
 
     $regexEmail = "/^[a-zA-Z0-9]+@[a-zA-Z]+.[a-zA-Z]+$/";
@@ -76,10 +79,12 @@
         }
         else{
             header("Location: /accommodation.php");
+            exit();
         }  
     }
     else {
         header("Location: /accommodation.php");
+        exit();
     }
 
     $regexPhone = "/^(\(04\)|04|\+614)[ ]?\d{4}[ ]?\d{4}$/";
@@ -91,10 +96,12 @@
         }
         else {
             header("Location: /accommodation.php");
+            exit();
         }  
     }
     else {
         header("Location: /accommodation.php");
+        exit();
     }
 
     
@@ -136,7 +143,9 @@
 
 
     $myfile = fopen("bookings.txt", "a") or die("Unable to open file!");
-    $txt = $name . "\t" . $phone . "\t" . $email . "\t" . $date . "\t" . $days . "\t" . $adults . "\t" . $children . "\t" ;
+    $txt = $name . "\t" . $phone . "\t" . $email ."\t" .
+       $aid . "\t" . $date . "\t" . $days . "\t" . $adults . "\t" . $children . "\t" ."$" .
+        number_format(($totalCost), 2, '.', '') . "\t"  ."$". number_format(($totalCost/11), 2, '.', '') ;
     fwrite($myfile, PHP_EOL . $txt);
     fclose($myfile);
 
