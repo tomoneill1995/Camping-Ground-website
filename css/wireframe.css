@@ -421,3 +421,12 @@ th{
   box-shadow: 5px 5px #888888;
   background-color: hsl(199, 28%, 17%,80%);
 }
+
+#error {
+  display: none;
+  color: red;
+}
+#phoneerror {
+  display: none;
+  color: red;
+}

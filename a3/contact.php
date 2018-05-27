@@ -1,24 +1,35 @@
 <?php 
 
       require_once("tools.php"); 
-
-    $mailing;
-    $name;
-    $email;
-    $phone;
-    $message;
-    $remember;
+    session_start(); 
   
     echo $head;
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
+      $errors = 0;
       $name = test_input($_POST["name"]);
       $email = test_input($_POST["email"]);
       $phone = test_input($_POST["phone"]);
       $message = test_input($_POST["message"]);
-      $mailing = test_input($_POST["mailing"]);
       $remember = test_input($_POST["rememberme"]);
+      
+      if (isset($_POST['phone'])){
+        if(!preg_match("/^(\(04\)|04|\+614)[ ]?\d{4}[ ]?\d{4}$/", $_POST['phone'])) {
+        $errors = $errors + 1;  
+        }
+      }
+      if (isset($_POST['name'])){
+        if(!preg_match("/[a-zA-Z\s'-.]+/", $_POST['name'])) {
+        $errors = $errors + 2;  
+        }
+      }
+      if(isset($_POST["mailing"])) {
+        $mailing = $_POST["mailing"];
+      } else {
+        $mailing = "off";
+  
+      }
     
-      if($mailing == "on"){
+      if($mailing == "on" && $errors == 0){
         $myfile = fopen("mailing.txt", "a") or die("Unable to open file!");
         $txt = $name . "  " . $email . "  " . $phone;
         fwrite($myfile, PHP_EOL . $txt);
@@ -26,6 +37,12 @@
         header("Location: /a3/index.php");
         exit;
       }
+
+      if($mailing != "on" && $errors == 0){
+        header("Location: /a3/index.php");
+        exit;
+      }
+
     }
 
     function test_input($data) {
@@ -46,8 +63,7 @@
 
   <?php echo $header; ?>
 
-
-  <main>
+<main>
 
   
 
@@ -69,7 +85,18 @@
              Name:
              <input required id="inputname" type="text" name="name" placeholder="Full name" pattern="[a-zA-Z\s'-.]+">
            </label>
-            <br>
+            <br> <div id="error"> Please use only English Letters and spaces. </div>
+            <?php 
+            if (isset($errors)) {
+              if($errors == 2 || $errors == 3) {
+                echo '<style type="text/css">
+              #error {
+              display: block;
+              color: red;
+              }   
+              </style>';
+              }
+            } ?> 
             <br>
             
             <label>Email:
@@ -79,9 +106,21 @@
             <br>
 
             <label> Number:
-            <input required id="inputphone" type="tel" name="phone" placeholder="Phone Number" pattern"^(\(04\)|04|\+614)([ ]?\d){8}$">
+            <input required id="inputphone" type="tel" name="phone" placeholder="Phone Number" pattern"^(\(04\)|04|\+614)[ ]?\d{4}[ ]?\d{4}$">
             </label>
             <br>
+            <div id="error"> Please use only Australian mobile numbers </div>
+            <?php 
+            if (isset($errors)) {
+              if($errors == 2 || $errors == 3) {
+                echo '<style type="text/css">
+              #phoneerror {
+              display: block;
+              color: red;
+              }   
+              </style>';
+              }
+            } ?> 
             <br>
             
           <label>Message:
@@ -110,7 +149,7 @@
 
   
  <?php 
-   footer();  
+   echo $footer;
  ?>
 
 
