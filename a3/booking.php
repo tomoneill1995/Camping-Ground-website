@@ -315,6 +315,22 @@
   }
 
 
+
+  
+  if (localStorage.getItem("name") !== null) {
+        var name = localStorage.getItem("name");
+        document.getElementById("name").value = name;
+    }
+    if (localStorage.getItem("email") !== null) {
+        var email = localStorage.getItem("email");
+        document.getElementById("email").value = name;
+    }
+    if (localStorage.getItem("phone") !== null) {
+        var phone = localStorage.getItem("phone");
+        document.getElementById("phone").value = name;
+    }
+
+
 </script>
 
 
