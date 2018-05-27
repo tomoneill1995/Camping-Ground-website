@@ -121,8 +121,7 @@
     if(isset($_POST['dataFailed']) && !empty($_POST['dataFailed']) && $_POST['dataFailed'] == "Yes") {
       echo "<p> Data failure from Booking page, please resubmit </p>";
     }           
-    echo "session2";
-    print_r($_SESSION);
+
   ?>
 
   <main>

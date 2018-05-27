@@ -44,15 +44,15 @@
                          'children'=>$_POST["children"]);
   
       if(checkInputValidation($postArray) == false) {
-        echo "It failed mate";
+  
         return false;
       }
-      echo "got here2";
+   
       return true;
     }  
   
     if(checkExists2() == false) {
-      echo "It failed mate2";
+    
     }
     else{
       $valid = true;
@@ -144,65 +144,69 @@
     }
   
       if(!(is_string($postArray["aid"]))) { //aid is not what we expect
-        //do something to handle error
-        echo("failed at aid");
+        header("Location: /accommodation.php");
+            exit();
         return false;
       }
       else {
         if(checkAID($postArray["aid"]) == false ){ 
-          echo("failed at aid2");
+          header("Location: /accommodation.php");
+          exit();
           return false;
         }
       }
 
       if(!(is_string($postArray["date"]))) { //days is not what we expect
-        //do something to handle error
-        echo("failed at date");
+        header("Location: /accommodation.php");
+            exit();
         return false;
       } 
       else{
         if(checkDateInput($postArray["date"]) == false) { 
-          echo("failed at date2");
+          header("Location: /accommodation.php");
+            exit();
           return false;
         }
       }
   
       if(!(is_numeric($postArray["days"]))) { //days is not what we expect
-        //do something to handle error
-        echo("failed at days");
+        header("Location: /accommodation.php");
+            exit();
         return false;
       }
       else {
         if(checkDays($postArray["days"]) == false) { 
-          echo("failed at days2");
+          header("Location: /accommodation.php");
+            exit();
           return false;
         }
       }
   
       if(!(is_numeric($postArray["adults"]))) { //adult is not what we expect
-        //do something to handle error
-        echo("failed at adults");
+        header("Location: /accommodation.php");
+            exit();
         return false;
       }
       else {
         if(checkAdults($postArray["adults"]) == false) { 
-          echo("failed at adults2");
+          header("Location: /accommodation.php");
+            exit();
           return false;
         }
       }
   
       if(!(is_numeric($postArray["children"]))) { //chuldren is not what we expect
-        //do something to handle error
-        echo("failed at children");
+        header("Location: /accommodation.php");
+            exit();
         return false;
       }
       else {
         if(checkChildren($postArray["children"]) == false) { 
-          echo("failed at children2");
+      
           return false;
         }
       }
-      echo "Got here";
+     
       return true;
     }
 
