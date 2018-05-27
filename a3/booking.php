@@ -316,19 +316,22 @@
 
 
 
-  
-  if (localStorage.getItem("name") !== null) {
+  window.onload = function(e){ 
+
+    if (localStorage.getItem("name") !== null) {
         var name = localStorage.getItem("name");
         document.getElementById("name").value = name;
     }
     if (localStorage.getItem("email") !== null) {
         var email = localStorage.getItem("email");
-        document.getElementById("email").value = name;
+        document.getElementById("email").value = email;
     }
     if (localStorage.getItem("phone") !== null) {
         var phone = localStorage.getItem("phone");
-        document.getElementById("phone").value = name;
+        document.getElementById("phone").value = phone;
     }
+     
+ }
 
 
 </script>
@@ -357,7 +360,7 @@
   <p class="white"> Duration of Stay: <?php echo $days; ?> </p> <br>
   <p class="white"> Number of Adults: <?php echo $adults; ?>  </p> <br>
   <p class="white"> Number of Children: <?php echo $children; ?>  </p> <br>
-  <p class="white"> Total Cost: $<?php echo number_format(($totalCost), 2, '.', '');; ?> <br> </p> <br>
+  <p class="white"> Total Cost: $<?php echo number_format(($totalCost), 2, '.', ''); ?> <br> </p> <br>
   <p class="white"> Total GST: $<?php echo number_format(($totalCost/11), 2, '.', ''); ?>  </p> <br>
 
     <form onsubmit="" method="POST" action="/accommodation.php">
