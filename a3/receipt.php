@@ -154,6 +154,11 @@
 <script>
 
    // Remove background image
+
+  }
+
+
+   
    // Remove styles from body
    //
 
@@ -169,10 +174,20 @@
 
   <main class = "receipt">
 
-    <label>Customer Name: <?php echo $name; ?> <br> </label> 
-    <label>Email: <?php echo $email; ?> <br> </label>
-    <label>Phone: <?php echo $phone; ?> <br> </label>
-    
+  
+  <h1 class="white"> Receipt</h1>
+   
+
+  <div id="receipt" class="receipt width100Percent"> 
+
+    <h1 class="white"> Contact Information</h1>
+    <p class="white"> Open Bays Caravan Park</p>
+    <p class="white"> Phone: 03 1234 4321</p>
+    <p class="white"> Address: Portalington, VIC 3223</p>
+    <p class="white"> Email: information@openbays.com.au</p>
+
+
+    <h1 class="white"> Booking Information</h1>
     <p class="white"> Campsite: <?php echo $namePerID[$aid];  ?> </p> <br>
     <p class="white"> Arrival Date: <?php echo $date; ?> </p> <br>
     <p class="white"> Duration of Stay: <?php echo $days; ?> </p> <br>
@@ -183,9 +198,16 @@
     <p class="white"> Total GST: $<?php echo number_format(($totalCost/11), 2, '.', ''); ?>  </p> <br>
 
 
+
+    <h1 class="white"> Customer Information</h1>
+    <label>Customer Name: <?php echo $name; ?> <br> </label> 
+    <label>Email: <?php echo $email; ?> <br> </label>
+    <label>Phone: <?php echo $phone; ?> <br> </label>
+   
+</div>
   </main>
 
 
   <?php 
-    footer();  
+   // footer();  
   ?>

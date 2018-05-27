@@ -360,7 +360,7 @@
       <h1 class="white"> Booking Information</h1>
     </article>
 
-  <div id="Booking" class="button inlineFlex width100Percent"> 
+  <div id="Booking" class="button width100Percent"> 
 
   <p class="white"> Campsite: <?php echo $namePerID[$aid];  ?> </p> <br>
   <p class="white"> Arrival Date: <?php echo $date; ?> </p> <br>
