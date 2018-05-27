@@ -2,12 +2,7 @@
     
     require_once("tools.php"); 
     
-   // session_start(); 
-    echo("Session1");
-    print_r($_SESSION);
-
-    echo("Post");
-    print_r($_POST); 
+ 
 
     if( isset($_POST) && !empty($_POST) ){
       $_SESSION["booking"] = $_POST; 

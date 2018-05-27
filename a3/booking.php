@@ -4,9 +4,6 @@
 
   echo $head;
 
-  echo("POST:");
-  print_r($_POST);
-
   $name;
   $email;
   $phone;
@@ -238,8 +235,7 @@
       //Data validated, add it to our session variable and move forwards.
   
       $_SESSION["booking"] = $_POST;
-      echo("Sesion:");
-      print_r($_SESSION["booking"]);
+
       //Add the finalisation bookin page here
 
       $nightsPerID = array('US'=>35.25,'UM'=>40.50,'PS'=>50.25,'PM'=>60.50,'C'=>100); //Match the selected AID to a nightly rate

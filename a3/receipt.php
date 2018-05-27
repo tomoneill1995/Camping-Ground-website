@@ -28,12 +28,6 @@
     $children = $_SESSION["booking"]["children"];
 
 
-    
-
-    //$_SESSION["booking"] = $_POST;
-    print_r($_SESSION["booking"]);
-
-
 
     function check($input) {
         $input = trim($input);
