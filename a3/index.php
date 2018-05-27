@@ -15,15 +15,7 @@
 <body>
 
     <?php
-      // This PHP code inserts CSS to style the "current page" link in the nav area
-      $here = $_SERVER['SCRIPT_NAME']; 
-      $bits = explode('/',$here); 
-      $filename = $bits[count($bits)-1]; 
-      echo "nav a[href$='$filename'] {
-           box-shadow: 1px 1px 1px 2px navy;
-      }";
-
-
+      
        echo $header;
 
 
