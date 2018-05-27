@@ -2,7 +2,7 @@
 
 // Add the recept page here
     require_once("tools.php");
-    session_start(); 
+
 
 
     //validate these

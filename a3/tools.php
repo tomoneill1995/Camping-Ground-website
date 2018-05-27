@@ -2,6 +2,7 @@
 
 //Add some tools here, branches for all pages etc. 
 session_start(); 
+
 $head = <<<HTML
 
   <!DOCTYPE html>

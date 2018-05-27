@@ -1,8 +1,6 @@
 <?php 
 
   require_once("tools.php");
-  session_start(); 
-
 
   echo $head;
 

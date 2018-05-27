@@ -294,7 +294,6 @@
   
     footer();  
 
-    //echo $footer;
   ?>
 
 </body>
