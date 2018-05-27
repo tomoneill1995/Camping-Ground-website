@@ -155,7 +155,6 @@
 
    // Remove background image
 
-  }
 
 
    
@@ -172,7 +171,7 @@
 
 
 
-  <main class = "receipt">
+  <main >
 
   
   <h1 class="white"> Receipt</h1>

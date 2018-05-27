@@ -1,0 +1,14 @@
+.receipt{
+
+  background-color: hsl(199, 28%, 17%,40%);
+  border: 5px solid #000;
+  border-radius: 10%;
+  margin: 1%;
+  width: 100%;
+  text-align: left;
+  padding: 2%;
+}
+
+.white{
+  color: #fff;
+}
