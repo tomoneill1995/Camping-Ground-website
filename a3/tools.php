@@ -21,10 +21,10 @@ HTML;
 
 $links = <<<HTML
   <nav>
-    <a href="/~s3488614/wp/a2/index.html" > Home </a> 
-    <a href="/~s3488614/wp/a2/accommodation.html" > Accommodation </a> 
-    <a href="/~s3488614/wp/a2/rates.html" > Rates </a> 
-    <a href="/~s3488614/wp/a2/contact.html" > Contact </a> 
+    <a href="/~s3488614/wp/a3/index.html" > Home </a> 
+    <a href="/~s3488614/wp/a3/accommodation.html" > Accommodation </a> 
+    <a href="/~s3488614/wp/a3/rates.html" > Rates </a> 
+    <a href="/~s3488614/wp/a3/contact.html" > Contact </a> 
   </nav>
 HTML;
 
