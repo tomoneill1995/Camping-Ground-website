@@ -36,10 +36,10 @@ $header = <<<HTML
     <!-- https://pngtree.com/so/cartoon-tent -->
  
     <nav>
-      <a href="/~s3488614/wp/a2/index.html" > Home </a> 
-      <a href="/~s3488614/wp/a2/accommodation.html" > Accommodation </a> 
-      <a href="/~s3488614/wp/a2/rates.html" > Rates </a> 
-      <a href="/~s3488614/wp/a2/contact.html" > Contact </a> 
+    <a href="/~s3488614/wp/a3/index.php" > Home </a> 
+    <a href="/~s3488614/wp/a3/accommodation.php" > Accommodation </a> 
+    <a href="/~s3488614/wp/a3/rates.php" > Rates </a> 
+    <a href="/~s3488614/wp/a3/contact.php" > Contact </a> 
     </nav>
   </header>
 HTML;
