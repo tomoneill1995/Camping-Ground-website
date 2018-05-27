@@ -39,7 +39,25 @@
 
 
 
-    echo $head;
+    echo '
+
+    <!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="Tom ONeill + Craig Robinson" content="Assignment 3">
+    <title>Open Bay Caravan Park</title>
+    <link type="text/css" rel="stylesheet" href="/css/receipt.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Cabin|Port+Lligat+Sans" rel="stylesheet">
+    <!-- We will cover style later. Skip down to the body tag --> 
+ </head>
+    
+    ';
+
+
+
+
 
 
 
@@ -174,10 +192,12 @@
   <main >
 
   
-  <h1 class="white"> Receipt</h1>
+  
    
 
   <div id="receipt" class="receipt width100Percent"> 
+
+    <h1 class="white"> Receipt</h1>
 
     <h1 class="white"> Contact Information</h1>
     <p class="white"> Open Bays Caravan Park</p>
@@ -201,7 +221,7 @@
     <h1 class="white"> Customer Information</h1>
     <label>Customer Name: <?php echo $name; ?> <br> </label> 
     <label>Email: <?php echo $email; ?> <br> </label>
-    <label>Phone: <?php echo $phone; ?> <br> </label>
+    <label>Phone: <?php echo $phone; ?> <br> </label> <br> <br>
    
 </div>
   </main>

@@ -4,11 +4,20 @@
   border: 5px solid #000;
   border-radius: 10%;
   margin: 1%;
-  width: 100%;
+  width: 90%;
   text-align: left;
   padding: 2%;
 }
 
 .white{
   color: #fff;
+}
+
+p,label {
+  font-family: open-sans;
+  font-size: 20px;
+  margin: 0;
+}
+label {
+  color:white;
 }
