@@ -1,7 +1,9 @@
 <?php 
 
       require_once("tools.php"); 
-    session_start(); 
+      if( isset($_POST) && !empty($_POST) ){
+        $_SESSION["booking"] = $_POST; 
+      } 
   
     echo $head;
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -12,14 +14,21 @@
       $message = test_input($_POST["message"]);
       $remember = test_input($_POST["rememberme"]);
       
+      if(!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)){
+        $errors = $errors + 1;
+        $emailerror = true;
+      }
+
       if (isset($_POST['phone'])){
         if(!preg_match("/^(\(04\)|04|\+614)[ ]?\d{4}[ ]?\d{4}$/", $_POST['phone'])) {
         $errors = $errors + 1;  
+        $phoneerror = true;
         }
       }
       if (isset($_POST['name'])){
         if(!preg_match("/[a-zA-Z\s'-.]+/", $_POST['name'])) {
-        $errors = $errors + 2;  
+        $errors = $errors + 1;
+        $nameerror = true;  
         }
       }
       if(isset($_POST["mailing"])) {
@@ -85,17 +94,11 @@
              Name:
              <input required id="inputname" type="text" name="name" placeholder="Full name" pattern="[a-zA-Z\s'-.]+">
            </label>
-            <br> <div id="error"> Please use only English Letters and spaces. </div>
-            <?php 
-            if (isset($errors)) {
-              if($errors == 2 || $errors == 3) {
-                echo '<style type="text/css">
-              #error {
-              display: block;
-              color: red;
-              }   
-              </style>';
-              }
+            <br>
+            <?php
+            if (isset($nameerror)) {
+              if($nameerror){
+                echo "<p class='red'>Please use English letters and space</p>";}
             } ?> 
             <br>
             
@@ -103,23 +106,21 @@
             <input required id="inputemail" type="email" name="email" placeholder="Email">
             </label>
             <br>
+            <?php
+            if (isset($emailerror)) {
+              if($emailerror){
+                echo "<p class='red'>Please enter a valid email</p>";}
+            } ?> 
             <br>
 
             <label> Number:
             <input required id="inputphone" type="tel" name="phone" placeholder="Phone Number" pattern"^(\(04\)|04|\+614)[ ]?\d{4}[ ]?\d{4}$">
             </label>
             <br>
-            <div id="error"> Please use only Australian mobile numbers </div>
             <?php 
-            if (isset($errors)) {
-              if($errors == 2 || $errors == 3) {
-                echo '<style type="text/css">
-              #phoneerror {
-              display: block;
-              color: red;
-              }   
-              </style>';
-              }
+            if (isset($phoneerror)) {
+              if($phoneerror){
+                echo "<p class='red'>Please use only Australian mobile numbers</p>";}
             } ?> 
             <br>
             
