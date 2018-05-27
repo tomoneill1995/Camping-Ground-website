@@ -2,7 +2,7 @@
     
     require_once("tools.php"); 
     
-    session_start(); 
+   // session_start(); 
     echo("Session1");
     print_r($_SESSION);
 
@@ -292,7 +292,9 @@
 
   <?php 
   
-    echo $footer;
+    footer();  
+
+    //echo $footer;
   ?>
 
 </body>

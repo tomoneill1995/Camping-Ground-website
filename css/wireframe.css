@@ -123,8 +123,8 @@ article
 
 aside
 {
-  background-color: hsl(180,100%,97%);
-  border: 5px solid hsl(180,100%,40%);
+  /* background-color: hsl(180,100%,97%); */
+  /* border: 5px solid hsl(180,100%,40%); */
 }
 section
 {
@@ -133,8 +133,8 @@ section
 }
 details
 {
-  background-color: hsl(60,60%,97%);
-  border: 5px solid hsl(60,60%,60%);    
+  /* background-color: hsl(60,60%,97%); */
+  /* border: 5px solid hsl(60,60%,60%);     */
 }
 div
 {

@@ -430,7 +430,7 @@
 
   
 <?php 
-  echo $footer;
+  footer();  
 ?>
 
 

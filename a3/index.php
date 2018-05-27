@@ -82,7 +82,7 @@
 
 
    <?php 
-     echo $footer;
+     footer();  
    ?>
 
 </body>

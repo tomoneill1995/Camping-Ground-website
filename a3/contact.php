@@ -111,7 +111,7 @@
 
   
  <?php 
-   echo $footer;
+   footer();  
  ?>
 
 

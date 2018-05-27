@@ -1,7 +1,7 @@
 <?php 
 
 //Add some tools here, branches for all pages etc. 
-
+session_start(); 
 $head = <<<HTML
 
   <!DOCTYPE html>
@@ -58,29 +58,50 @@ $footer = <<<HTML
 HTML;
 
 function footer() {
-  echo $footer;
+  echo $GLOBALS['footer'];
   debug();
 }
 
 
 function debug() {
-    $debug= <<<DEBUG
 
-    <aside id='debug'>
-    <details open>
-      <summary>=Debug Show/Hide</summary>
-        <pre>
-         . $_SESSION . contains: 
-         {print_r($_SESSION,true)} .
+  echo $GLOBALS['debug2'];
+}
+//    $debug= <<<DEBUG
 
-          $_POST . contains:
-          {print_r($_POST,true)}
+//     <aside id='debug'>
+//     <details open>
+//       <summary>=Debug Show/Hide</summary>
+//         <pre>
+//          'SESSION' contains: 
+//          {print_r($_SESSION,true)} 
+
+//           'POST'  contains:
+//           {print_r($_POST,true)}
+//     </pre>
+//   </details>
+// </aside>  
+
+// DEBUG;
+
+$debug2 = "
+
+<aside id='debug'>
+  <details open>
+    <summary>=Debug Show/Hide</summary>
+    <pre>
+      SESSION contains:
+        " .  print_r($_SESSION,true) . "
+
+      POST contains:
+       " .   print_r($_POST,true) ." 
     </pre>
   </details>
-</aside>  
+</aside>
 
-DEBUG;
-}
+";
+
+
 
 
 

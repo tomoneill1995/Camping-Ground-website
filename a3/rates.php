@@ -80,7 +80,7 @@
   </main>
   
   <?php 
-   echo $footer;
+   footer();  
   ?>
 
 

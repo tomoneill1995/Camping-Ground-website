@@ -193,5 +193,5 @@
 
 
   <?php 
-    echo $footer;
+    footer();  
   ?>
