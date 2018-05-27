@@ -370,7 +370,7 @@
   <p class="white"> Total Cost: $<?php echo number_format(($totalCost), 2, '.', ''); ?> <br> </p> <br>
   <p class="white"> Total GST: $<?php echo number_format(($totalCost/11), 2, '.', ''); ?>  </p> <br>
 
-    <form onsubmit="" method="POST" action="/accommodation.php">
+    <form onsubmit="" method="POST" action="/~s3488614/wp/a3/accommodation.php">
       <input type="hidden" name="aid" id="aid" value = "">
       <input type="hidden" name="date" value =""> 
       <input type="hidden" name="days" id="days" value="">
@@ -395,7 +395,7 @@
 
       
 
-      <form onsubmit="return validateReceipt()" method="POST" action="/receipt.php">
+      <form onsubmit="return validateReceipt()" method="POST" action="/~s3488614/wp/a3/receipt.php">
      
         <label>Customer Name: </label> 
           <input type="text" id="name" name="name" class="Width150" required > 
