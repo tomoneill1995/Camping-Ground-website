@@ -82,7 +82,7 @@
         exit();
     }
 
-    $regexEmail = "/^[a-zA-Z0-9]+@[a-zA-Z]+.[a-zA-Z]+$/";
+    $regexEmail = "/^[a-zA-Z0-9]+@[a-zA-Z0-9]+.[a-zA-Z]+$/";
     if(isset($_POST["email"]) && !empty($_POST["email"]) ) {
 
         if (preg_match($regexEmail, $_POST["email"])) {
