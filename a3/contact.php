@@ -43,12 +43,12 @@
         $txt = $name . "  " . $email . "  " . $phone;
         fwrite($myfile, PHP_EOL . $txt);
         fclose($myfile);
-        header("Location: /a3/index.php");
+        header("Location: /~s3488614/wp/a3/index.php");
         exit;
       }
 
       if($mailing != "on" && $errors == 0){
-        header("Location: /a3/index.php");
+        header("Location: /~s3488614/wp/a3/index.php");
         exit;
       }
 

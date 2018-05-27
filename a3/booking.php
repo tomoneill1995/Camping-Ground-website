@@ -144,59 +144,59 @@
     }
   
       if(!(is_string($postArray["aid"]))) { //aid is not what we expect
-        header("Location: /accommodation.php");
+        header("Location: /~s3488614/wp/a3/accommodation.php");
             exit();
         return false;
       }
       else {
         if(checkAID($postArray["aid"]) == false ){ 
-          header("Location: /accommodation.php");
+          header("Location:/~s3488614/wp/a3/accommodation.php");
           exit();
           return false;
         }
       }
 
       if(!(is_string($postArray["date"]))) { //days is not what we expect
-        header("Location: /accommodation.php");
+        header("Location: /~s3488614/wp/a3/accommodation.php");
             exit();
         return false;
       } 
       else{
         if(checkDateInput($postArray["date"]) == false) { 
-          header("Location: /accommodation.php");
+          header("Location: /~s3488614/wp/a3/accommodation.php");
             exit();
           return false;
         }
       }
   
       if(!(is_numeric($postArray["days"]))) { //days is not what we expect
-        header("Location: /accommodation.php");
+        header("Location: /~s3488614/wp/a3/accommodation.php");
             exit();
         return false;
       }
       else {
         if(checkDays($postArray["days"]) == false) { 
-          header("Location: /accommodation.php");
+          header("Location: /~s3488614/wp/a3/accommodation.php");
             exit();
           return false;
         }
       }
   
       if(!(is_numeric($postArray["adults"]))) { //adult is not what we expect
-        header("Location: /accommodation.php");
+        header("Location: /~s3488614/wp/a3/accommodation.php");
             exit();
         return false;
       }
       else {
         if(checkAdults($postArray["adults"]) == false) { 
-          header("Location: /accommodation.php");
+          header("Location: /~s3488614/wp/a3/accommodation.php");
             exit();
           return false;
         }
       }
   
       if(!(is_numeric($postArray["children"]))) { //chuldren is not what we expect
-        header("Location: /accommodation.php");
+        header("Location: /~s3488614/wp/a3/accommodation.php");
             exit();
         return false;
       }
@@ -226,7 +226,7 @@
       echo ("Data issue, please navigate back");
    
       echo '
-        <form id="dataRedirectAccommodation" action="/accommodation.php" method="post">
+        <form id="dataRedirectAccommodation" action="/~s3488614/wp/a3/accommodation.php" method="post">
           <input type="hidden" name="dataFailed" id="datafailed" value = "Yes">
         </form>
         <script type="text/javascript">

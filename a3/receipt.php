@@ -17,7 +17,7 @@
         
       }
       else{  
-        header("Location: /accommodation.php");
+        header("Location: /~s3488614/wp/a3/accommodation.php");
         exit();
       }
     
@@ -73,12 +73,12 @@
           
         }
         else{
-            header("Location: /accommodation.php");
+            header("Location: /~s3488614/wp/a3/accommodation.php");
             exit();
         }  
     }
     else {
-        header("Location: /accommodation.php");
+        header("Location: /~s3488614/wp/a3/accommodation.php");
         exit();
     }
 
@@ -90,12 +90,12 @@
             
         }
         else{
-            header("Location: /accommodation.php");
+            header("Location: /~s3488614/wp/a3/accommodation.php");
             exit();
         }  
     }
     else {
-        header("Location: /accommodation.php");
+        header("Location: /~s3488614/wp/a3/accommodation.php");
         exit();
     }
 
@@ -107,12 +107,12 @@
 
         }
         else {
-            header("Location: /accommodation.php");
+            header("Location: /~s3488614/wp/a3/accommodation.php");
             exit();
         }  
     }
     else {
-        header("Location: /accommodation.php");
+        header("Location: /~s3488614/wp/a3/accommodation.php");
         exit();
     }
 
